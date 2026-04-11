@@ -37,14 +37,14 @@ export default function Home() {
       id: "rayonnement",
       title: "Rayonnement International",
       keywords: ["Plus grand tournoi Indoor d'Europe", "1350 athlètes", "48 nations"],
-      imageUrl: "https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
+      imageUrl: "/rayonnement-international.jpg",
       details: "Le Occitanie Nîmes Archery Tournament, 28ème édition en 2026, est le plus grand tournoi de tir à l'arc en salle d'Europe.\n\n1350 athlètes de 48 nations et 5 continents réunis pour 3 jours de compétition (16-18 janvier 2026).\n\n5ème étape de la prestigieuse Indoor World Series (IWS), aux côtés de Lausanne, Luxembourg, Taipei, Rio de Janeiro, Mérida et Las Vegas.\n\nFinales diffusées en direct dans le monde entier avec scores en temps réel.\n\nPrésence confirmée de Brady Ellison (n°1 mondial, USA), Penny Healey (GBR), et tous les médaillés olympiques de Paris 2024.\n\nTrois sites de compétition : Palais des Sports - Le Parnasse, Parc des Expositions, L'Estanque.",
       gallery: [
         {
           type: "image",
-          src: "https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+          src: "/rayonnement-international.jpg",
           title: "Tournoi Indoor Nîmes 2026",
-          description: "1350 participants de 48 nations"
+          description: "1350 participants de 48 nations - Vue du Parnasse"
         }
       ] as GalleryItem[]
     },

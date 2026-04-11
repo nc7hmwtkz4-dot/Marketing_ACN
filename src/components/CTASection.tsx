@@ -3,7 +3,18 @@ import { Button } from "@/components/ui/button";
 
 export function CTASection() {
   return (
-    <section className="relative h-screen w-full flex items-center justify-center snap-start snap-always bg-gradient-to-br from-primary via-secondary to-primary">
+    <section
+      id="contact"
+      className="relative min-h-screen snap-start snap-always flex items-center justify-center overflow-hidden"
+    >
+      <div className="absolute inset-0">
+        <img
+          src="/devenez-partenaire.jpg"
+          alt="Devenez partenaire"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/80 to-primary/90" />
+      </div>
       <div className="container mx-auto px-4 text-center text-white z-10">
         <div className="max-w-3xl mx-auto space-y-8">
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
