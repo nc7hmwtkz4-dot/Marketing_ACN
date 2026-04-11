@@ -16,26 +16,26 @@ export function CTASection() {
         <div className="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/80 to-primary/90" />
       </div>
 
-      <div className="relative z-10 container mx-auto px-4 text-center text-white">
-        <div className="max-w-3xl mx-auto space-y-12">
-          <h2 className="text-5xl md:text-7xl font-bold tracking-tight">
+      <div className="relative z-10 container mx-auto px-4 py-20 md:py-0 text-center text-white">
+        <div className="max-w-3xl mx-auto space-y-8 md:space-y-12">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight px-2">
             Devenez Partenaire
           </h2>
           
-          <p className="text-xl md:text-2xl leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl leading-relaxed px-4">
             Rejoignez l'aventure du 1er club français de tir à l'arc
             et associez votre marque à l'excellence sportive.
           </p>
 
-          <div className="flex flex-col md:flex-row gap-6 justify-center items-center pt-8">
+          <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center pt-6 md:pt-8 px-4">
             <Button
               asChild
               size="lg"
-              className="bg-accent hover:bg-accent/90 text-white text-lg px-8 py-6 rounded-full"
+              className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-white text-base md:text-lg px-6 md:px-8 py-5 md:py-6 rounded-full"
             >
-              <a href="tel:+33466291632" className="flex items-center gap-3">
-                <Phone className="w-5 h-5" />
-                04 66 29 16 32
+              <a href="tel:+33466291632" className="flex items-center justify-center gap-3">
+                <Phone className="w-4 h-4 md:w-5 md:h-5" />
+                <span className="whitespace-nowrap">04 66 29 16 32</span>
               </a>
             </Button>
 
@@ -43,19 +43,19 @@ export function CTASection() {
               asChild
               size="lg"
               variant="outline"
-              className="bg-transparent text-white border-white hover:bg-white hover:text-primary text-lg px-8 py-6 rounded-full"
+              className="w-full sm:w-auto bg-transparent text-white border-white hover:bg-white hover:text-primary text-base md:text-lg px-6 md:px-8 py-5 md:py-6 rounded-full"
             >
-              <a href="mailto:contact@arcclubdenimes.com" className="flex items-center gap-3">
-                <Mail className="w-5 h-5" />
-                contact@arcclubdenimes.com
+              <a href="mailto:contact@arcclubdenimes.com" className="flex items-center justify-center gap-3">
+                <Mail className="w-4 h-4 md:w-5 md:h-5" />
+                <span className="text-sm sm:text-base md:text-lg">contact@arcclubdenimes.com</span>
               </a>
             </Button>
           </div>
         </div>
       </div>
 
-      <div className="absolute bottom-4 right-4 z-10">
-        <p className="text-white/40 text-xs font-light">
+      <div className="absolute bottom-3 md:bottom-4 right-3 md:right-4 z-10">
+        <p className="text-white/40 text-[10px] md:text-xs font-light">
           Crédit photo ©World Archery
         </p>
       </div>
