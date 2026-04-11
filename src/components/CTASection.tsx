@@ -15,42 +15,49 @@ export function CTASection() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/80 to-primary/90" />
       </div>
-      <div className="container mx-auto px-4 text-center text-white z-10">
-        <div className="max-w-3xl mx-auto space-y-8">
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
+
+      <div className="relative z-10 container mx-auto px-4 text-center text-white">
+        <div className="max-w-3xl mx-auto space-y-12">
+          <h2 className="text-5xl md:text-7xl font-bold tracking-tight">
             Devenez Partenaire
           </h2>
-          <p className="text-xl md:text-2xl opacity-90 leading-relaxed">
-            Rejoignez l'Arc Club de Nîmes et associez votre marque à l'excellence sportive.
+          
+          <p className="text-xl md:text-2xl leading-relaxed">
+            Rejoignez l'aventure du 1er club français de tir à l'arc
+            et associez votre marque à l'excellence sportive.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
+
+          <div className="flex flex-col md:flex-row gap-6 justify-center items-center pt-8">
             <Button
-              size="lg"
               asChild
-              className="bg-accent hover:bg-accent/90 text-white px-8 py-6 text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all"
+              size="lg"
+              className="bg-accent hover:bg-accent/90 text-white text-lg px-8 py-6 rounded-full"
             >
-              <a href="tel:+33466291632">
-                <Phone className="mr-2 w-5 h-5" />
+              <a href="tel:+33466291632" className="flex items-center gap-3">
+                <Phone className="w-5 h-5" />
                 04 66 29 16 32
               </a>
             </Button>
+
             <Button
+              asChild
               size="lg"
               variant="outline"
-              asChild
-              className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 px-8 py-6 text-lg font-semibold rounded-full"
+              className="bg-transparent text-white border-white hover:bg-white hover:text-primary text-lg px-8 py-6 rounded-full"
             >
-              <a href="mailto:contact@arcclubdenimes.com">
-                <Mail className="mr-2 w-5 h-5" />
-                Nous contacter
+              <a href="mailto:contact@arcclubdenimes.com" className="flex items-center gap-3">
+                <Mail className="w-5 h-5" />
+                contact@arcclubdenimes.com
               </a>
             </Button>
           </div>
-          <div className="pt-12 text-sm opacity-70">
-            <p>Arc Club de Nîmes — Stade de l'Assomption</p>
-            <p>7 Rue Marcel Pellissier, 30000 Nîmes</p>
-          </div>
         </div>
+      </div>
+
+      <div className="absolute bottom-4 right-4 z-10">
+        <p className="text-white/40 text-xs font-light">
+          Crédit photo ©World Archery
+        </p>
       </div>
     </section>
   );
