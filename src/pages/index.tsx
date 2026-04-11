@@ -9,9 +9,9 @@ export default function Home() {
     {
       id: "excellence",
       title: "Excellence Sportive",
-      keywords: ["1er club français", "Médailles Paris 2024", "8 athlètes élite"],
+      keywords: ["1er club français", "Médailles Paris 2024", "4 athlètes top 40 mondial"],
       imageUrl: "/excellence-sportive.jpg",
-      details: "Médaille d'argent par équipe aux Jeux Olympiques de Paris 2024 avec Baptiste Addis (17 ans, plus jeune médaillé olympique français), Jean-Charles Valladont (médaillé argent Rio 2016) et Thomas Chirault.\n\n8 athlètes (4 féminins + 4 masculins) en préparation pour Los Angeles 2028.\n\nRégularité au plus haut niveau international : Championnats du Monde, d'Europe, Coupes du Monde et Indoor World Series.",
+      details: "Médaille d'argent par équipe aux Jeux Olympiques de Paris 2024 avec Baptiste Addis (n°7 mondial, 17 ans, plus jeune médaillé olympique français), Jean-Charles Valladont (n°36 mondial, médaillé argent Rio 2016) et Thomas Chirault.\n\n8 athlètes (4 féminins + 4 masculins) en préparation pour Los Angeles 2028.\n\nVictoria Sebastian : n°10 mondiale, vainqueur du Taipei Open en décembre 2025, médaillée de bronze à Nîmes et d'argent à Las Vegas en 2025.\n\nAnaëlle Florent : 24 ans, vise Los Angeles 2028 en arc à poulies après plusieurs sélections en équipe nationale.\n\nRégularité au plus haut niveau international : Championnats du Monde, d'Europe, Coupes du Monde et Indoor World Series.",
       gallery: [
         {
           type: "image",
@@ -36,15 +36,15 @@ export default function Home() {
     {
       id: "rayonnement",
       title: "Rayonnement International",
-      keywords: ["2ème tournoi au monde", "1355 participants", "50 nations"],
+      keywords: ["Plus grand tournoi Indoor d'Europe", "1350 athlètes", "48 nations"],
       imageUrl: "https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-      details: "Organisation depuis 1997 d'un tournoi international Indoor au Parnasse de Nîmes.\n\nAujourd'hui le 2ème plus important au monde après Las Vegas.\n\nFait partie du circuit mondial prestigieux Indoor World Series qui compte 7 tournois majeurs (Lausanne, Taipei, Luxembourg, Rio de Janeiro, Nîmes, Mérida, Las Vegas).",
+      details: "Le Occitanie Nîmes Archery Tournament, 28ème édition en 2026, est le plus grand tournoi de tir à l'arc en salle d'Europe.\n\n1350 athlètes de 48 nations et 5 continents réunis pour 3 jours de compétition (16-18 janvier 2026).\n\n5ème étape de la prestigieuse Indoor World Series (IWS), aux côtés de Lausanne, Luxembourg, Taipei, Rio de Janeiro, Mérida et Las Vegas.\n\nFinales diffusées en direct dans le monde entier avec scores en temps réel.\n\nPrésence confirmée de Brady Ellison (n°1 mondial, USA), Penny Healey (GBR), et tous les médaillés olympiques de Paris 2024.\n\nTrois sites de compétition : Palais des Sports - Le Parnasse, Parc des Expositions, L'Estanque.",
       gallery: [
         {
           type: "image",
           src: "https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
           title: "Tournoi Indoor Nîmes 2026",
-          description: "1355 participants de 50 nations"
+          description: "1350 participants de 48 nations"
         }
       ] as GalleryItem[]
     },
@@ -53,7 +53,7 @@ export default function Home() {
       title: "Impact Économique",
       keywords: ["2ème événement nîmois", "Hôtellerie", "Restauration & Services"],
       imageUrl: "https://images.unsplash.com/photo-1542861214-36762c4bd675?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-      details: "Au-delà de l'aspect sportif, l'Arc Club de Nîmes est un acteur économique majeur pour la ville.\n\nNotre tournoi international est le deuxième événement de la ville de Nîmes après la Féria en termes de retombées économiques directes.\n\nIl génère une activité essentielle en plein mois de janvier pour les domaines de l'hôtellerie, de la restauration et des services locaux.",
+      details: "Au-delà de l'aspect sportif, l'Arc Club de Nîmes est un acteur économique majeur pour la ville.\n\nNotre tournoi international est le deuxième événement de la ville de Nîmes après la Féria en termes de retombées économiques directes.\n\nIl génère une activité essentielle en plein mois de janvier pour les domaines de l'hôtellerie, de la restauration et des services locaux.\n\nPrès de 30 ans d'existence, une référence mondiale qui attire les meilleurs archers internationaux qui apprécient la qualité de l'organisation et l'expérience unique du tournoi tricolore.\n\nAprès une année record en 2025 avec 1238 archers participants, le tournoi poursuit sa croissance.",
       gallery: [] as GalleryItem[]
     },
     {
@@ -61,7 +61,7 @@ export default function Home() {
       title: "Parité & Inclusion",
       keywords: ["Équipe mixte 50/50", "Para Archerie", "Solidarité internationale"],
       imageUrl: "https://images.unsplash.com/photo-1522770179533-24471fcdba45?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-      details: "Un engagement fort pour l'égalité : notre collectif pour Los Angeles 2028 est parfaitement paritaire (4 femmes, 4 hommes) et nos athlètes féminines, comme Victoria Sebastian (récente victoire en or en Coupe du Monde), brillent au plus haut niveau.\n\nNous soutenons activement la Para Archerie et la pratique pour les seniors.\n\nNotre solidarité dépasse les frontières : nous entraînons et accompagnons deux athlètes de l'équipe nationale de Côte d'Ivoire vers les JO 2028.",
+      details: "Un engagement fort pour l'égalité : notre collectif pour Los Angeles 2028 est parfaitement paritaire (4 femmes, 4 hommes) et nos athlètes féminines brillent au plus haut niveau.\n\nVictoria Sebastian (n°10 mondiale) : vainqueur du Taipei Open en décembre 2025, médaillée de bronze à Nîmes et d'argent à Las Vegas.\n\nAnaëlle Florent : après plusieurs sélections en équipe nationale, elle vise désormais Los Angeles 2028 en arc à poulies.\n\nNous soutenons activement la Para Archerie et la pratique pour les seniors.\n\nNotre solidarité dépasse les frontières : nous entraînons et accompagnons deux athlètes de l'équipe nationale de Côte d'Ivoire vers les JO 2028.",
       gallery: [] as GalleryItem[]
     },
     {
@@ -69,7 +69,7 @@ export default function Home() {
       title: "Engagement Territorial",
       keywords: ["Programme dans 9 écoles", "Formation jeunesse", "Sport pour tous"],
       imageUrl: "https://images.unsplash.com/photo-1473662284951-c31bc9eb72c6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-      details: "L'Arc Club de Nîmes grandit avec sa ville et s'investit pour sa jeunesse.\n\nNous réalisons et finançons entièrement un programme d'éducation sportive déployé dans 9 écoles de la ville de Nîmes.\n\nDe la découverte scolaire jusqu'au podium olympique, nous défendons une vision du sport accessible à tous, formatrice et inclusive, transmettant les valeurs de concentration, de respect et de maîtrise de soi.",
+      details: "L'Arc Club de Nîmes grandit avec sa ville et s'investit pour sa jeunesse.\n\nNous réalisons et finançons entièrement un programme d'éducation sportive déployé dans 9 écoles de la ville de Nîmes.\n\nDe la découverte scolaire jusqu'au podium olympique, nous défendons une vision du sport accessible à tous, formatrice et inclusive, transmettant les valeurs de concentration, de respect et de maîtrise de soi.\n\nNîmes, capitale mondiale du tir à l'arc pour trois jours en janvier, accueille l'élite mondiale et inspire la prochaine génération d'archers.",
       gallery: [] as GalleryItem[]
     }
   ];
