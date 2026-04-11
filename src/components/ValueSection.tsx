@@ -38,6 +38,8 @@ export function ValueSection({
     setCurrentImageIndex((prev) => (prev - 1 + gallery.length) % gallery.length);
   };
 
+  const isEconomieSection = id === "economie";
+
   return (
     <section
       id={id}
@@ -49,7 +51,109 @@ export function ValueSection({
           alt={title}
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/70 to-black/70" />
+      </div>
+
+      <div className="relative z-10 container mx-auto px-4 py-20">
+        <div className="max-w-6xl mx-auto text-center space-y-8 text-white">
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white">
+            {title}
+          </h2>
+
+          {isEconomieSection ? (
+            <div className="space-y-12 pt-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <div className="bg-white/10 backdrop-blur-sm border-2 border-accent rounded-2xl p-8 text-center hover:bg-white/20 transition-all">
+                  <div className="text-5xl md:text-6xl font-bold text-accent mb-3">
+                    1,6M€
+                  </div>
+                  <div className="text-lg md:text-xl font-semibold text-white mb-2">
+                    Retombées Directes
+                  </div>
+                  <div className="text-sm text-white/80">
+                    Tournoi 2026
+                  </div>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-sm border-2 border-secondary rounded-2xl p-8 text-center hover:bg-white/20 transition-all">
+                  <div className="text-5xl md:text-6xl font-bold text-secondary mb-3">
+                    400K€
+                  </div>
+                  <div className="text-lg md:text-xl font-semibold text-white mb-2">
+                    Impact Indirect
+                  </div>
+                  <div className="text-sm text-white/80">
+                    Par an
+                  </div>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-sm border-2 border-primary rounded-2xl p-8 text-center hover:bg-white/20 transition-all">
+                  <div className="text-5xl md:text-6xl font-bold text-primary mb-3">
+                    2350
+                  </div>
+                  <div className="text-lg md:text-xl font-semibold text-white mb-2">
+                    Visiteurs
+                  </div>
+                  <div className="text-sm text-white/80">
+                    3,5 jours moyenne
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-4 justify-center text-base md:text-lg">
+                {keywords.map((keyword, idx) => (
+                  <span
+                    key={idx}
+                    className="px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full font-medium text-white border border-white/30"
+                  >
+                    {keyword}
+                  </span>
+                ))}
+              </div>
+
+              <button
+                onClick={() => setActiveTab("details")}
+                className="mt-6 px-8 py-4 bg-white text-primary font-semibold rounded-full hover:bg-white/90 transition-all inline-flex items-center gap-2 text-lg"
+              >
+                En savoir plus
+                <ChevronDown className="w-5 h-5" />
+              </button>
+            </div>
+          ) : (
+            <>
+              <div className="flex flex-wrap gap-4 justify-center text-base md:text-lg lg:text-2xl">
+                {keywords.map((keyword, idx) => (
+                  <span
+                    key={idx}
+                    className="px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full font-medium text-white"
+                  >
+                    {keyword}
+                  </span>
+                ))}
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+                <button
+                  onClick={() => setActiveTab("details")}
+                  className="px-8 py-4 bg-white text-primary font-semibold rounded-full hover:bg-white/90 transition-all inline-flex items-center justify-center gap-2 text-lg"
+                >
+                  En savoir plus
+                  <ChevronDown className="w-5 h-5" />
+                </button>
+
+                {gallery && gallery.length > 0 && (
+                  <button
+                    onClick={() => setActiveTab("gallery")}
+                    className="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-primary transition-all inline-flex items-center justify-center gap-2 text-lg"
+                  >
+                    <Images className="w-5 h-5" />
+                    Galerie
+                  </button>
+                )}
+              </div>
+            </>
+          )}
+        </div>
       </div>
 
       <div className="relative z-10 container mx-auto px-4 py-20 text-center text-white">
