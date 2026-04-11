@@ -1,6 +1,6 @@
 import { SEO } from "@/components/SEO";
 import { Header } from "@/components/Header";
-import { ValueSection } from "@/components/ValueSection";
+import { ValueSection, type GalleryItem } from "@/components/ValueSection";
 import { CTASection } from "@/components/CTASection";
 import { ScrollNavigation } from "@/components/ScrollNavigation";
 
@@ -31,7 +31,7 @@ export default function Home() {
           title: "Midi Libre - Dans la cour des grands",
           description: "Portrait des champions nîmois"
         }
-      ]
+      ] as GalleryItem[]
     },
     {
       id: "rayonnement",
@@ -46,7 +46,7 @@ export default function Home() {
           title: "Tournoi Indoor Nîmes 2026",
           description: "1355 participants de 50 nations"
         }
-      ]
+      ] as GalleryItem[]
     },
     {
       id: "economie",
@@ -54,7 +54,7 @@ export default function Home() {
       keywords: ["2ème événement nîmois", "Hôtellerie", "Restauration & Services"],
       imageUrl: "https://images.unsplash.com/photo-1542861214-36762c4bd675?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
       details: "Au-delà de l'aspect sportif, l'Arc Club de Nîmes est un acteur économique majeur pour la ville.\n\nNotre tournoi international est le deuxième événement de la ville de Nîmes après la Féria en termes de retombées économiques directes.\n\nIl génère une activité essentielle en plein mois de janvier pour les domaines de l'hôtellerie, de la restauration et des services locaux.",
-      gallery: []
+      gallery: [] as GalleryItem[]
     },
     {
       id: "parite",
@@ -62,7 +62,7 @@ export default function Home() {
       keywords: ["Équipe mixte 50/50", "Para Archerie", "Solidarité internationale"],
       imageUrl: "https://images.unsplash.com/photo-1522770179533-24471fcdba45?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
       details: "Un engagement fort pour l'égalité : notre collectif pour Los Angeles 2028 est parfaitement paritaire (4 femmes, 4 hommes) et nos athlètes féminines, comme Victoria Sebastian (récente victoire en or en Coupe du Monde), brillent au plus haut niveau.\n\nNous soutenons activement la Para Archerie et la pratique pour les seniors.\n\nNotre solidarité dépasse les frontières : nous entraînons et accompagnons deux athlètes de l'équipe nationale de Côte d'Ivoire vers les JO 2028.",
-      gallery: []
+      gallery: [] as GalleryItem[]
     },
     {
       id: "territoire",
@@ -70,7 +70,7 @@ export default function Home() {
       keywords: ["Programme dans 9 écoles", "Formation jeunesse", "Sport pour tous"],
       imageUrl: "https://images.unsplash.com/photo-1473662284951-c31bc9eb72c6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
       details: "L'Arc Club de Nîmes grandit avec sa ville et s'investit pour sa jeunesse.\n\nNous réalisons et finançons entièrement un programme d'éducation sportive déployé dans 9 écoles de la ville de Nîmes.\n\nDe la découverte scolaire jusqu'au podium olympique, nous défendons une vision du sport accessible à tous, formatrice et inclusive, transmettant les valeurs de concentration, de respect et de maîtrise de soi.",
-      gallery: []
+      gallery: [] as GalleryItem[]
     }
   ];
 
