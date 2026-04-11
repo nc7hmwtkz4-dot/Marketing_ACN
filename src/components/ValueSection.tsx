@@ -2,11 +2,12 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-interface ValueSectionProps {
+export interface ValueSectionProps {
+  id: string;
   title: string;
   keywords: string[];
-  details?: string;
-  imageUrl: string;
+  image: string;
+  details: string;
   index: number;
 }
 
@@ -31,43 +32,47 @@ export function ValueSection({
           alt={title}
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
+        <div className="absolute inset-0 bg-black/60" />
       </div>
-      <div className="container mx-auto px-4 text-center text-white z-10">
-        <div className="max-w-2xl mx-auto space-y-6">
-          <span className="inline-block text-sm font-medium tracking-wider uppercase opacity-80">
-            Valeur {index + 1}
-          </span>
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
+
+      <div className="relative z-10 container mx-auto px-4 text-center text-white">
+        <div 
+          className="max-w-4xl mx-auto space-y-8 opacity-0 animate-fade-in-up"
+          style={{ animationDelay: `${index * 0.2}s`, animationFillMode: 'forwards' }}
+        >
+          <h2 className="text-5xl md:text-7xl font-bold tracking-tight">
             {title}
           </h2>
-          <div className="flex flex-wrap justify-center gap-4 text-lg md:text-xl">
+          
+          <div className="flex flex-wrap justify-center gap-4 md:gap-8 text-lg md:text-2xl font-medium">
             {keywords.map((keyword, i) => (
-              <span
-                key={i}
-                className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20"
-              >
-                {keyword}
+              <span key={i} className="flex items-center gap-4">
+                <span>{keyword}</span>
+                {i < keywords.length - 1 && (
+                  <span className="w-2 h-2 rounded-full bg-accent hidden md:block" />
+                )}
               </span>
             ))}
           </div>
-          {details && (
-            <div className="pt-4">
-              <Button
-                variant="outline"
-                className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20"
-                onClick={() => setShowDetails(!showDetails)}
+
+          <div className="pt-8">
+            {!showDetails ? (
+              <Button 
+                onClick={() => setShowDetails(true)}
+                variant="outline" 
+                className="bg-transparent text-white border-white hover:bg-white hover:text-primary text-lg px-8 py-6 rounded-full transition-all"
               >
-                {showDetails ? "Masquer" : "En savoir plus"}
-                <ChevronDown className={`ml-2 w-4 h-4 transition-transform ${showDetails ? "rotate-180" : ""}`} />
+                En savoir plus
+                <ChevronDown className="ml-2 w-5 h-5 animate-bounce" />
               </Button>
-              {showDetails && (
-                <p className="mt-6 text-base md:text-lg max-w-xl mx-auto leading-relaxed bg-black/30 backdrop-blur-sm p-6 rounded-lg">
+            ) : (
+              <div className="bg-black/40 backdrop-blur-md p-8 md:p-12 rounded-2xl text-left animate-in fade-in slide-in-from-bottom-8 duration-500 max-h-[50vh] overflow-y-auto">
+                <p className="text-lg md:text-xl leading-relaxed whitespace-pre-wrap">
                   {details}
                 </p>
-              )}
-            </div>
-          )}
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </section>
