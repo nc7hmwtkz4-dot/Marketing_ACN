@@ -10,19 +10,29 @@ interface ValueSectionProps {
   index: number;
 }
 
-export function ValueSection({ title, keywords, details, imageUrl, index }: ValueSectionProps) {
+export function ValueSection({
+  id,
+  title,
+  keywords,
+  image,
+  details,
+  index,
+}: ValueSectionProps) {
   const [showDetails, setShowDetails] = useState(false);
 
   return (
     <section
-      className="relative h-screen w-full flex items-center justify-center snap-start snap-always"
-      style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${imageUrl})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundAttachment: "fixed",
-      }}
+      id={id}
+      className="relative min-h-screen snap-start snap-always flex items-center justify-center overflow-hidden"
     >
+      <div className="absolute inset-0">
+        <img
+          src={image}
+          alt={title}
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
+      </div>
       <div className="container mx-auto px-4 text-center text-white z-10">
         <div className="max-w-2xl mx-auto space-y-6">
           <span className="inline-block text-sm font-medium tracking-wider uppercase opacity-80">
