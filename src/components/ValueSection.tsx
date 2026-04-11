@@ -15,8 +15,8 @@ export interface ValueSectionProps {
   keywords: string[];
   image: string;
   details: string;
-  index: number;
   gallery: GalleryItem[];
+  index: number;
 }
 
 export function ValueSection({
@@ -25,8 +25,8 @@ export function ValueSection({
   keywords,
   image,
   details,
-  index,
   gallery,
+  index,
 }: ValueSectionProps) {
   const [activeTab, setActiveTab] = useState<"none" | "details" | "gallery">("none");
   const [selectedGalleryIndex, setSelectedGalleryIndex] = useState(0);
@@ -46,15 +46,13 @@ export function ValueSection({
       </div>
 
       <div className="relative z-10 container mx-auto px-4 text-center text-white">
-        <div 
-          className="max-w-4xl mx-auto space-y-8 opacity-0 animate-fade-in-up"
-          style={{ animationDelay: `${index * 0.2}s`, animationFillMode: "forwards" }}
-        >
-          <h2 className="text-5xl md:text-7xl font-bold tracking-tight">
+        <div className="max-w-4xl mx-auto space-y-8">
+          {/* TITRE ET MOTS-CLÉS - TOUJOURS VISIBLES */}
+          <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white">
             {title}
           </h2>
           
-          <div className="flex flex-wrap justify-center gap-4 md:gap-8 text-lg md:text-2xl font-medium">
+          <div className="flex flex-wrap justify-center gap-4 md:gap-8 text-lg md:text-2xl font-medium text-white">
             {keywords.map((keyword, i) => (
               <span key={i} className="flex items-center gap-4">
                 <span>{keyword}</span>
@@ -65,9 +63,10 @@ export function ValueSection({
             ))}
           </div>
 
+          {/* BOUTONS OU CONTENU */}
           <div className="pt-8">
             {activeTab === "none" && (
-              <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Button 
                   onClick={() => setActiveTab("details")}
                   variant="outline" 
@@ -91,73 +90,91 @@ export function ValueSection({
             )}
 
             {activeTab === "details" && (
-              <div className="bg-black/40 backdrop-blur-md p-8 md:p-12 rounded-2xl text-left animate-in fade-in slide-in-from-bottom-8 duration-500 max-h-[50vh] overflow-y-auto">
-                <button
+              <div className="space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-500">
+                <div className="bg-black/40 backdrop-blur-md p-8 md:p-12 rounded-2xl text-left max-h-[50vh] overflow-y-auto">
+                  <p className="text-lg md:text-xl leading-relaxed whitespace-pre-wrap text-white">
+                    {details}
+                  </p>
+                </div>
+                <Button 
                   onClick={() => setActiveTab("none")}
-                  className="absolute top-4 right-4 text-white hover:text-accent transition-colors"
+                  variant="ghost" 
+                  className="text-white hover:bg-white/10"
                 >
-                  <X className="w-6 h-6" />
-                </button>
-                <p className="text-lg md:text-xl leading-relaxed whitespace-pre-wrap">
-                  {details}
-                </p>
+                  <X className="mr-2 w-5 h-5" />
+                  Fermer
+                </Button>
               </div>
             )}
 
             {activeTab === "gallery" && gallery.length > 0 && (
-              <div className="bg-black/40 backdrop-blur-md p-8 md:p-12 rounded-2xl animate-in fade-in slide-in-from-bottom-8 duration-500 max-h-[60vh] overflow-y-auto">
-                <button
-                  onClick={() => setActiveTab("none")}
-                  className="absolute top-4 right-4 text-white hover:text-accent transition-colors z-20"
-                >
-                  <X className="w-6 h-6" />
-                </button>
-                
-                <div className="space-y-6">
-                  <div className="aspect-video relative rounded-lg overflow-hidden">
-                    <img
-                      src={gallery[selectedGalleryIndex].src}
-                      alt={gallery[selectedGalleryIndex].title}
-                      className="w-full h-full object-cover"
-                    />
+              <div className="space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-500">
+                <div className="bg-black/40 backdrop-blur-md p-6 rounded-2xl max-h-[60vh] overflow-y-auto">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {gallery.map((item, idx) => (
+                      <div 
+                        key={idx}
+                        className="relative group cursor-pointer overflow-hidden rounded-lg aspect-video bg-black/20"
+                        onClick={() => setSelectedGalleryIndex(idx)}
+                      >
+                        <img 
+                          src={item.src} 
+                          alt={item.title}
+                          className="w-full h-full object-cover transition-transform group-hover:scale-110"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                          <div className="absolute bottom-0 left-0 right-0 p-4">
+                            <p className="text-sm font-semibold text-white">{item.title}</p>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                  
-                  <div className="text-left space-y-2">
-                    <h3 className="text-2xl font-bold">
-                      {gallery[selectedGalleryIndex].title}
-                    </h3>
-                    <p className="text-lg text-white/80">
-                      {gallery[selectedGalleryIndex].description}
-                    </p>
-                  </div>
-
-                  {gallery.length > 1 && (
-                    <div className="grid grid-cols-3 gap-4 pt-4">
-                      {gallery.map((item, idx) => (
-                        <button
-                          key={idx}
-                          onClick={() => setSelectedGalleryIndex(idx)}
-                          className={`aspect-video rounded-lg overflow-hidden transition-all ${
-                            idx === selectedGalleryIndex
-                              ? "ring-2 ring-accent scale-105"
-                              : "opacity-60 hover:opacity-100"
-                          }`}
-                        >
-                          <img
-                            src={item.src}
-                            alt={item.title}
-                            className="w-full h-full object-cover"
-                          />
-                        </button>
-                      ))}
-                    </div>
-                  )}
                 </div>
+                <Button 
+                  onClick={() => setActiveTab("none")}
+                  variant="ghost" 
+                  className="text-white hover:bg-white/10"
+                >
+                  <X className="mr-2 w-5 h-5" />
+                  Fermer
+                </Button>
               </div>
             )}
           </div>
         </div>
       </div>
+
+      {/* MODAL GALERIE FULLSCREEN */}
+      {activeTab === "gallery" && selectedGalleryIndex !== null && (
+        <div 
+          className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4"
+          onClick={() => setSelectedGalleryIndex(0)}
+        >
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              setActiveTab("none");
+              setSelectedGalleryIndex(0);
+            }}
+            className="absolute top-4 right-4 text-white hover:text-accent transition-colors"
+          >
+            <X className="w-8 h-8" />
+          </button>
+          
+          <div className="max-w-5xl w-full" onClick={(e) => e.stopPropagation()}>
+            <img 
+              src={gallery[selectedGalleryIndex].src} 
+              alt={gallery[selectedGalleryIndex].title}
+              className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
+            />
+            <div className="mt-4 text-center text-white">
+              <h3 className="text-2xl font-bold mb-2">{gallery[selectedGalleryIndex].title}</h3>
+              <p className="text-lg text-white/80">{gallery[selectedGalleryIndex].description}</p>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
