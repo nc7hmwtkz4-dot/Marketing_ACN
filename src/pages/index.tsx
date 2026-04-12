@@ -12,8 +12,8 @@ export default function Home(): ReactElement {
       title: "Excellence Sportive",
       keywords: ["1er club français", "Top 10 mondial", "100 podiums nationaux"],
       imageUrl: "/excellence-sportive.jpg",
-      details: "L'Arc Club de Nîmes incarne l'excellence sportive au plus haut niveau national et international.\n\nNous sommes le premier club français de tir à l'arc, avec un palmarès exceptionnel :\n• Plus de 100 podiums en championnats de France toutes catégories\n• Classement régulier dans le Top 10 des clubs mondiaux\n• Formation de champions olympiques et mondiaux\n• Centre d'entraînement reconnu par la Fédération Française de Tir à l'Arc\n\nNotre approche combine excellence technique, suivi personnalisé et infrastructure de premier plan pour permettre à nos athlètes d'atteindre leur plein potentiel.",
-      gallery: []
+      details: "L'Arc Club de Nîmes incarne l'excellence sportive au plus haut niveau national et international.\n\nNous sommes le premier club français de tir à l'arc, avec un palmarès exceptionnel :\n• Plus de 100 podiums en championnats de France toutes catégories\n• Athlètes classés régulièrement dans le Top 10 mondial\n• Formation de champions olympiques et mondiaux\n• Centre d'entraînement reconnu par la Fédération Française de Tir à l'Arc\n\nSÉLECTIONS OLYMPIQUES :\n• Séverine Bonal (JO 1992, 1996)\n• Aurore Trayan (JO 2004)\n• Jean-Charles Valladont (JO 2008, 2016, 2020, 2024)\n• Pierre Jagnäs (JO 2016, 2020)\n• Addis Cohet (JO 2024)\n\nCLASSEMENTS MONDIAUX :\n• Jean-Charles Valladont — N°1 mondial (2017)\n• Pierre Jagnäs — N°5 mondial (2014)\n• Addis Cohet — N°6 mondial (2026)\n• Sebastian Page — N°7 mondial (2025)\n• Aubert — N°10 mondial (2013)\n\nNotre approche combine excellence technique, suivi personnalisé et infrastructure de premier plan pour permettre à nos athlètes d'atteindre leur plein potentiel.",
+      gallery: [] as GalleryItem[]
     },
     {
       id: "rayonnement",
