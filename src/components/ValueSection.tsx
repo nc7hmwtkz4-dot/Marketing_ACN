@@ -149,31 +149,27 @@ export function ValueSection({ index, id, title, keywords, image, details, galle
         </div>
       </div>
 
-      {showDetails &&
-      <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 overflow-y-auto">
-          <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[80vh] overflow-y-auto relative">
-            <button
-            onClick={() => setShowDetails(false)}
-            className="absolute top-4 right-4 p-2 bg-foreground/10 hover:bg-foreground/20 rounded-full transition-colors z-10">
-            
-              <X className="w-6 h-6" />
-            </button>
-
-            <div className="p-8 md:p-12">
-              <h3 className="text-3xl md:text-4xl font-bold mb-6 text-foreground pr-12">
-                {title}
-              </h3>
-              <div className="prose prose-lg max-w-none text-foreground/80">
-                {details.split('\n\n').map((paragraph, idx) =>
-              <p key={idx} className="mb-4 leading-relaxed">
-                    {paragraph}
-                  </p>
-              )}
-              </div>
+      {showDetails && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+          <div className="bg-white rounded-2xl max-w-3xl w-full max-h-[80vh] overflow-y-auto">
+            <div className="sticky top-0 bg-white border-b border-gray-200 p-6 flex justify-between items-center">
+              <h3 className="text-2xl md:text-3xl font-bold text-primary">{title}</h3>
+              <button
+                onClick={() => setShowDetails(false)}
+                className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                aria-label="Fermer"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+            <div className="p-6 md:p-8">
+              <p className="text-gray-700 text-base md:text-lg leading-relaxed whitespace-pre-line">
+                {details}
+              </p>
             </div>
           </div>
         </div>
-      }
+      )}
 
       {showGallery && gallery && gallery.length > 0 &&
       <div className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4">
