@@ -1,14 +1,9 @@
 import type { ReactElement } from "react";
 import { SEO } from "@/components/SEO";
 import { Header } from "@/components/Header";
-import { ValueSection } from "@/components/ValueSection";
+import { ValueSection, type GalleryItem } from "@/components/ValueSection";
 import { CTASection } from "@/components/CTASection";
 import { ScrollNavigation } from "@/components/ScrollNavigation";
-
-export interface GalleryItem {
-  url: string;
-  caption: string;
-}
 
 export default function Home(): ReactElement {
   const values = [
