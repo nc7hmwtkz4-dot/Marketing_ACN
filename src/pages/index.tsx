@@ -9,44 +9,26 @@ export default function Home() {
     {
       id: "excellence",
       title: "Excellence Sportive",
-      keywords: ["1er club français", "Médailles Paris 2024", "4 athlètes top 40 mondial"],
+      keywords: ["1er club français", "Top 10 mondial", "100 podiums nationaux"],
       imageUrl: "/excellence-sportive.jpg",
-      details: "Médaille d'argent par équipe aux Jeux Olympiques de Paris 2024 avec Baptiste Addis (n°7 mondial, 17 ans, plus jeune médaillé olympique français), Jean-Charles Valladont (n°36 mondial, médaillé argent Rio 2016) et Thomas Chirault.\n\n8 athlètes (4 féminins + 4 masculins) en préparation pour Los Angeles 2028.\n\nVictoria Sebastian : n°10 mondiale, vainqueur du Taipei Open en décembre 2025, médaillée de bronze à Nîmes et d'argent à Las Vegas en 2025.\n\nAnaëlle Florent : 24 ans, vise Los Angeles 2028 en arc à poulies après plusieurs sélections en équipe nationale.\n\nRégularité au plus haut niveau international : Championnats du Monde, d'Europe, Coupes du Monde et Indoor World Series.",
-      gallery: [
-        {
-          type: "image",
-          src: "/excellence-sportive.jpg",
-          title: "Podium Paris 2024",
-          description: "Médaille d'argent par équipe - Addis, Valladont, Chirault"
-        },
-        {
-          type: "article",
-          src: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-          title: "L'Équipe - Les flèches d'argent",
-          description: "Couverture médiatique Paris 2024"
-        },
-        {
-          type: "article",
-          src: "https://images.unsplash.com/photo-1586339949916-3e9457bef6d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-          title: "Midi Libre - Dans la cour des grands",
-          description: "Portrait des champions nîmois"
-        }
-      ] as GalleryItem[]
+      details: "L'Arc Club de Nîmes incarne l'excellence sportive au plus haut niveau national et international.\n\nNous sommes le premier club français de tir à l'arc, avec un palmarès exceptionnel :\n• Plus de 100 podiums en championnats de France toutes catégories\n• Classement régulier dans le Top 10 des clubs mondiaux\n• Formation de champions olympiques et mondiaux\n• Centre d'entraînement reconnu par la Fédération Française de Tir à l'Arc\n\nNotre approche combine excellence technique, suivi personnalisé et infrastructure de premier plan pour permettre à nos athlètes d'atteindre leur plein potentiel.",
+      gallery: [] as GalleryItem[]
     },
     {
       id: "rayonnement",
       title: "Rayonnement International",
-      keywords: ["Plus grand tournoi Indoor d'Europe", "1350 athlètes", "48 nations"],
+      keywords: ["48 nations", "1350 athlètes", "30 ans d'histoire"],
       imageUrl: "/rayonnement-international.jpg",
-      details: "Le Occitanie Nîmes Archery Tournament, 28ème édition en 2026, est le plus grand tournoi de tir à l'arc en salle d'Europe.\n\n1350 athlètes de 48 nations et 5 continents réunis pour 3 jours de compétition (16-18 janvier 2026).\n\n5ème étape de la prestigieuse Indoor World Series (IWS), aux côtés de Lausanne, Luxembourg, Taipei, Rio de Janeiro, Mérida et Las Vegas.\n\nFinales diffusées en direct dans le monde entier avec scores en temps réel.\n\nPrésence confirmée de Brady Ellison (n°1 mondial, USA), Penny Healey (GBR), et tous les médaillés olympiques de Paris 2024.\n\nTrois sites de compétition : Palais des Sports - Le Parnasse, Parc des Expositions, L'Estanque.",
-      gallery: [
-        {
-          type: "image",
-          src: "/rayonnement-international.jpg",
-          title: "Tournoi Indoor Nîmes 2026",
-          description: "1350 participants de 48 nations - Vue du Parnasse"
-        }
-      ] as GalleryItem[]
+      details: "Notre tournoi international indoor est devenu une référence mondiale dans le calendrier du tir à l'arc.\n\nChiffres clés de notre rayonnement :\n• 48 nations représentées chaque année\n• 1350 athlètes internationaux participants\n• 30 années d'organisation sans interruption\n• Retransmission en direct sur les chaînes internationales\n\nCe tournoi positionne Nîmes comme une capitale mondiale du tir à l'arc et offre une visibilité exceptionnelle à nos partenaires sur la scène internationale.\n\nLes meilleurs archers du monde considèrent notre tournoi comme un passage obligé de la saison indoor.",
+      gallery: [] as GalleryItem[]
+    },
+    {
+      id: "formation",
+      title: "Formation & Jeunesse",
+      keywords: ["300 licenciés", "École de tir", "Détection talents"],
+      imageUrl: "https://images.unsplash.com/photo-1551958219-acbc608c6377?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
+      details: "La formation des jeunes talents est au cœur de notre mission et de notre identité.\n\nNotre école de tir à l'arc :\n• 300 licenciés dont 60% de jeunes de moins de 18 ans\n• Encadrement par des entraîneurs diplômés d'État\n• Parcours d'excellence de la découverte au haut niveau\n• Partenariats avec les établissements scolaires locaux\n• Programme de détection et suivi individualisé des talents\n\nNous formons les champions de demain tout en transmettant les valeurs essentielles du sport : discipline, concentration, respect et dépassement de soi.",
+      gallery: [] as GalleryItem[]
     },
     {
       id: "economie",
@@ -57,19 +39,11 @@ export default function Home() {
       gallery: [] as GalleryItem[]
     },
     {
-      id: "parite",
-      title: "Parité & Inclusion",
-      keywords: ["Équipe mixte 50/50", "Para Archerie", "Solidarité internationale"],
-      imageUrl: "https://images.unsplash.com/photo-1522770179533-24471fcdba45?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-      details: "Un engagement fort pour l'égalité : notre collectif pour Los Angeles 2028 est parfaitement paritaire (4 femmes, 4 hommes) et nos athlètes féminines brillent au plus haut niveau.\n\nVictoria Sebastian (n°10 mondiale) : vainqueur du Taipei Open en décembre 2025, médaillée de bronze à Nîmes et d'argent à Las Vegas.\n\nAnaëlle Florent : après plusieurs sélections en équipe nationale, elle vise désormais Los Angeles 2028 en arc à poulies.\n\nNous soutenons activement la Para Archerie et la pratique pour les seniors.\n\nNotre solidarité dépasse les frontières : nous entraînons et accompagnons deux athlètes de l'équipe nationale de Côte d'Ivoire vers les JO 2028.",
-      gallery: [] as GalleryItem[]
-    },
-    {
-      id: "territoire",
-      title: "Engagement Territorial",
-      keywords: ["Programme dans 9 écoles", "Formation jeunesse", "Sport pour tous"],
-      imageUrl: "https://images.unsplash.com/photo-1473662284951-c31bc9eb72c6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-      details: "L'Arc Club de Nîmes grandit avec sa ville et s'investit pour sa jeunesse.\n\nNous réalisons et finançons entièrement un programme d'éducation sportive déployé dans 9 écoles de la ville de Nîmes.\n\nDe la découverte scolaire jusqu'au podium olympique, nous défendons une vision du sport accessible à tous, formatrice et inclusive, transmettant les valeurs de concentration, de respect et de maîtrise de soi.\n\nNîmes, capitale mondiale du tir à l'arc pour trois jours en janvier, accueille l'élite mondiale et inspire la prochaine génération d'archers.",
+      id: "valeurs",
+      title: "Nos Valeurs",
+      keywords: ["Passion", "Excellence", "Partage"],
+      imageUrl: "https://images.unsplash.com/photo-1511886929837-354d827aae26?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
+      details: "Les valeurs qui nous animent et nous définissent au quotidien.\n\nPassion :\nL'amour du tir à l'arc guide chacune de nos actions. C'est cette passion qui nous pousse à viser toujours plus haut et à transmettre notre discipline aux nouvelles générations.\n\nExcellence :\nNous cultivons l'excellence dans tous les aspects de notre activité : performance sportive, qualité de l'enseignement, organisation d'événements et accueil de nos partenaires.\n\nPartage :\nNous croyons au pouvoir du sport comme vecteur de lien social. Notre club est un lieu de rencontre, d'échange et de transmission entre générations et cultures.",
       gallery: [] as GalleryItem[]
     }
   ];
