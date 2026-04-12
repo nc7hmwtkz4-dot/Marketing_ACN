@@ -24,12 +24,12 @@ export default function Home(): ReactElement {
       gallery: [] as GalleryItem[]
     },
     {
-      id: "formation",
-      title: "Formation & Jeunesse",
-      keywords: ["300 licenciés", "École de tir", "Détection talents"],
+      id: "parite",
+      title: "Parité & Inclusion",
+      keywords: ["Équipe mixte 50/50", "Para Archerie", "Solidarité internationale"],
       imageUrl: "https://images.unsplash.com/photo-1551958219-acbc608c6377?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-      details: "La formation des jeunes talents est au cœur de notre mission et de notre identité.\n\nNotre école de tir à l'arc :\n• 300 licenciés dont 60% de jeunes de moins de 18 ans\n• Encadrement par des entraîneurs diplômés d'État\n• Parcours d'excellence de la découverte au haut niveau\n• Partenariats avec les établissements scolaires locaux\n• Programme de détection et suivi individualisé des talents\n\nNous formons les champions de demain tout en transmettant les valeurs essentielles du sport : discipline, concentration, respect et dépassement de soi.",
-      gallery: []
+      details: "L'Arc Club de Nîmes s'engage pour un sport accessible et inclusif.\n\nNotre approche de la parité et de l'inclusion :\n• Équipe mixte avec 50% de femmes et 50% d'hommes\n• Section Para Archerie dédiée aux athlètes en situation de handicap\n• Programmes de solidarité internationale pour promouvoir le tir à l'arc dans le monde\n• Accueil et accompagnement de tous les profils, sans discrimination\n• Formation d'entraîneurs sensibilisés aux problématiques d'inclusion\n\nNous croyons que le tir à l'arc doit être accessible à tous, quels que soient le genre, l'âge, l'origine ou les capacités physiques. Notre club est un lieu d'ouverture et de diversité.",
+      gallery: [] as GalleryItem[]
     },
     {
       id: "economie",
