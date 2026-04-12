@@ -36,14 +36,14 @@ export function ValueSection({ index, id, title, keywords, image, details, galle
   return (
     <section
       id={id}
-      className="relative min-h-screen snap-start snap-always flex items-center justify-center overflow-hidden"
-    >
+      className="relative min-h-screen snap-start snap-always flex items-center justify-center overflow-hidden">
+      
       <div className="absolute inset-0">
         <img
           src={image}
           alt={title}
-          className="w-full h-full object-cover"
-        />
+          className="w-full h-full object-cover" />
+        
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/70 to-black/70" />
       </div>
 
@@ -53,8 +53,8 @@ export function ValueSection({ index, id, title, keywords, image, details, galle
             {title}
           </h2>
 
-          {isEconomieSection ? (
-            <div className="space-y-12 pt-8">
+          {isEconomieSection ?
+          <div className="space-y-12 pt-8">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
                 <div className="bg-white/10 backdrop-blur-sm border-2 border-accent rounded-2xl p-8 text-center hover:bg-white/20 transition-all">
                   <div className="text-5xl md:text-6xl font-bold text-accent mb-3">
@@ -94,68 +94,68 @@ export function ValueSection({ index, id, title, keywords, image, details, galle
               </div>
 
               <div className="flex flex-wrap gap-4 justify-center text-base md:text-lg">
-                {keywords.map((keyword, idx) => (
-                  <span
-                    key={idx}
-                    className="px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full font-medium text-white border border-white/30"
-                  >
+                {keywords.map((keyword, idx) =>
+              <span
+                key={idx}
+                className="px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full font-medium text-white border border-white/30">
+                
                     {keyword}
                   </span>
-                ))}
+              )}
               </div>
 
               <button
-                onClick={() => setShowDetails(true)}
-                className="mt-6 px-8 py-4 bg-white text-primary font-semibold rounded-full hover:bg-white/90 transition-all inline-flex items-center gap-2 text-lg"
-              >
+              onClick={() => setShowDetails(true)}
+              className="mt-6 px-8 py-4 bg-white text-primary font-semibold rounded-full hover:bg-white/90 transition-all inline-flex items-center gap-2 text-lg">
+              
                 En savoir plus
                 <ChevronDown className="w-5 h-5" />
               </button>
-            </div>
-          ) : (
-            <>
+            </div> :
+
+          <>
               <div className="flex flex-wrap gap-4 justify-center text-base md:text-lg lg:text-2xl">
-                {keywords.map((keyword, idx) => (
-                  <span
-                    key={idx}
-                    className="px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full font-medium text-white"
-                  >
-                    {keyword}
-                  </span>
-                ))}
+                {keywords.map((keyword, idx) =>
+              <span
+                key={idx}
+                className="px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full font-medium text-white">3 Médailles Olympiques
+
+
+              </span>
+              )}
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                 <button
-                  onClick={() => setShowDetails(true)}
-                  className="px-8 py-4 bg-white text-primary font-semibold rounded-full hover:bg-white/90 transition-all inline-flex items-center justify-center gap-2 text-lg"
-                >
+                onClick={() => setShowDetails(true)}
+                className="px-8 py-4 bg-white text-primary font-semibold rounded-full hover:bg-white/90 transition-all inline-flex items-center justify-center gap-2 text-lg">
+                
                   En savoir plus
                   <ChevronDown className="w-5 h-5" />
                 </button>
 
-                {gallery && gallery.length > 0 && (
-                  <button
-                    onClick={() => setShowGallery(true)}
-                    className="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-primary transition-all inline-flex items-center justify-center gap-2 text-lg"
-                  >
+                {gallery && gallery.length > 0 &&
+              <button
+                onClick={() => setShowGallery(true)}
+                className="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-primary transition-all inline-flex items-center justify-center gap-2 text-lg">
+                
                     <Images className="w-5 h-5" />
                     Galerie
                   </button>
-                )}
+              }
               </div>
             </>
-          )}
+          }
         </div>
       </div>
 
-      {showDetails && (
-        <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 overflow-y-auto">
+      {showDetails &&
+      <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 overflow-y-auto">
           <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[80vh] overflow-y-auto relative">
             <button
-              onClick={() => setShowDetails(false)}
-              className="absolute top-4 right-4 p-2 bg-foreground/10 hover:bg-foreground/20 rounded-full transition-colors z-10"
-            >
+            onClick={() => setShowDetails(false)}
+            className="absolute top-4 right-4 p-2 bg-foreground/10 hover:bg-foreground/20 rounded-full transition-colors z-10">
+            
               <X className="w-6 h-6" />
             </button>
 
@@ -164,51 +164,51 @@ export function ValueSection({ index, id, title, keywords, image, details, galle
                 {title}
               </h3>
               <div className="prose prose-lg max-w-none text-foreground/80">
-                {details.split('\n\n').map((paragraph, idx) => (
-                  <p key={idx} className="mb-4 leading-relaxed">
+                {details.split('\n\n').map((paragraph, idx) =>
+              <p key={idx} className="mb-4 leading-relaxed">
                     {paragraph}
                   </p>
-                ))}
+              )}
               </div>
             </div>
           </div>
         </div>
-      )}
+      }
 
-      {showGallery && gallery && gallery.length > 0 && (
-        <div className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4">
+      {showGallery && gallery && gallery.length > 0 &&
+      <div className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4">
           <button
-            onClick={() => setShowGallery(false)}
-            className="absolute top-4 right-4 p-2 bg-white/10 hover:bg-white/20 rounded-full transition-colors z-10"
-          >
+          onClick={() => setShowGallery(false)}
+          className="absolute top-4 right-4 p-2 bg-white/10 hover:bg-white/20 rounded-full transition-colors z-10">
+          
             <X className="w-6 h-6 text-white" />
           </button>
 
           <div className="relative w-full max-w-5xl">
-            {gallery.length > 1 && (
-              <>
+            {gallery.length > 1 &&
+          <>
                 <button
-                  onClick={prevImage}
-                  className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 p-2 md:p-3 bg-white/20 hover:bg-white/30 rounded-full transition-colors z-10"
-                >
+              onClick={prevImage}
+              className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 p-2 md:p-3 bg-white/20 hover:bg-white/30 rounded-full transition-colors z-10">
+              
                   <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-white" />
                 </button>
                 <button
-                  onClick={nextImage}
-                  className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 p-2 md:p-3 bg-white/20 hover:bg-white/30 rounded-full transition-colors z-10"
-                >
+              onClick={nextImage}
+              className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 p-2 md:p-3 bg-white/20 hover:bg-white/30 rounded-full transition-colors z-10">
+              
                   <ChevronRight className="w-5 h-5 md:w-6 md:h-6 text-white" />
                 </button>
               </>
-            )}
+          }
 
             <div className="bg-white rounded-2xl overflow-hidden">
               <div className="relative">
                 <img
-                  src={gallery[currentImageIndex].src}
-                  alt={gallery[currentImageIndex].title}
-                  className="w-full h-auto max-h-[40vh] md:max-h-[50vh] object-contain bg-black"
-                />
+                src={gallery[currentImageIndex].src}
+                alt={gallery[currentImageIndex].title}
+                className="w-full h-auto max-h-[40vh] md:max-h-[50vh] object-contain bg-black" />
+              
               </div>
 
               <div className="p-6 md:p-8">
@@ -219,26 +219,26 @@ export function ValueSection({ index, id, title, keywords, image, details, galle
                   {gallery[currentImageIndex].description}
                 </p>
 
-                {gallery.length > 1 && (
-                  <div className="mt-4 flex justify-center gap-2">
-                    {gallery.map((_, idx) => (
-                      <button
-                        key={idx}
-                        onClick={() => setCurrentImageIndex(idx)}
-                        className={`w-2 h-2 rounded-full transition-all ${
-                          idx === currentImageIndex
-                            ? "bg-primary w-8"
-                            : "bg-foreground/20"
-                        }`}
-                      />
-                    ))}
-                  </div>
+                {gallery.length > 1 &&
+              <div className="mt-4 flex justify-center gap-2">
+                    {gallery.map((_, idx) =>
+                <button
+                  key={idx}
+                  onClick={() => setCurrentImageIndex(idx)}
+                  className={`w-2 h-2 rounded-full transition-all ${
+                  idx === currentImageIndex ?
+                  "bg-primary w-8" :
+                  "bg-foreground/20"}`
+                  } />
+
                 )}
+                  </div>
+              }
               </div>
             </div>
           </div>
         </div>
-      )}
-    </section>
-  );
+      }
+    </section>);
+
 }
