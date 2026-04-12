@@ -18,10 +18,10 @@ export default function Home(): ReactElement {
     {
       id: "rayonnement",
       title: "Rayonnement International",
-      keywords: ["48 nations", "1350 athlètes", "30 ans d'histoire"],
+      keywords: ["50 nations", "1350 athlètes", "30 ans d'histoire"],
       imageUrl: "/rayonnement-international.jpg",
-      details: "Notre tournoi international indoor est devenu une référence mondiale dans le calendrier du tir à l'arc.\n\nChiffres clés de notre rayonnement :\n• 48 nations représentées chaque année\n• 1350 athlètes internationaux participants\n• 30 années d'organisation sans interruption\n• Retransmission en direct sur les chaînes internationales\n\nCe tournoi positionne Nîmes comme une capitale mondiale du tir à l'arc et offre une visibilité exceptionnelle à nos partenaires sur la scène internationale.\n\nLes meilleurs archers du monde considèrent notre tournoi comme un passage obligé de la saison indoor.",
-      gallery: []
+      details: "Notre tournoi international indoor est devenu une référence mondiale dans le calendrier du tir à l'arc.\n\nChiffres clés de notre rayonnement :\n• 50 nations représentées chaque année\n• 1350 athlètes internationaux participants\n• 30 années d'organisation sans interruption, dont deux championnats du Monde en 2003 et 2014\n• Retransmission en direct sur les chaînes internationales\n\nCe tournoi positionne Nîmes comme une capitale mondiale du tir à l'arc et offre une visibilité exceptionnelle à nos partenaires sur la scène internationale.\n\nLes meilleurs archers du monde considèrent notre tournoi comme un passage obligé du circuit international indoor, parmi Lausanne (SUI), Luxembourg (LUX), Taipei (TPE), Rio de Janeiro (BRA), Mérida (MEX), Las Vegas (USA).",
+      gallery: [] as GalleryItem[]
     },
     {
       id: "formation",
