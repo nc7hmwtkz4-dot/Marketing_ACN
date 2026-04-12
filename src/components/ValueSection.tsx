@@ -118,7 +118,7 @@ export function ValueSection({ index, id, title, keywords, image, details, galle
                 {keywords.map((keyword, idx) =>
               <span
                 key={idx}
-                className="px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full font-medium text-white">3 Médailles Olympiques
+                className="px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full font-medium text-white">X sélections en équipe nationale depuis 2014
 
 
               </span>
