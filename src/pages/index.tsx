@@ -1,10 +1,16 @@
+import type { ReactElement } from "react";
 import { SEO } from "@/components/SEO";
 import { Header } from "@/components/Header";
-import { ValueSection, type GalleryItem } from "@/components/ValueSection";
+import { ValueSection } from "@/components/ValueSection";
 import { CTASection } from "@/components/CTASection";
 import { ScrollNavigation } from "@/components/ScrollNavigation";
 
-export default function Home() {
+export interface GalleryItem {
+  url: string;
+  caption: string;
+}
+
+export default function Home(): ReactElement {
   const values = [
     {
       id: "excellence",
@@ -51,14 +57,14 @@ export default function Home() {
   return (
     <>
       <SEO 
-        title="Arc Club de Nîmes | Dossier Partenariat"
-        description="Découvrez les 5 valeurs qui font de l'Arc Club de Nîmes le 1er club de tir à l'arc de France. Rejoignez notre aventure sportive, économique et humaine."
+        title="Arc Club de Nîmes - Excellence & Rayonnement International"
+        description="Premier club français de tir à l'arc. Tournoi international de référence avec 48 nations et 1350 athlètes. Partenaire d'excellence sportive."
       />
       <Header />
-      <main className="snap-y snap-mandatory h-screen overflow-y-auto">
+      <main className="scroll-smooth snap-y snap-mandatory h-screen overflow-y-scroll">
         {values.map((value, index) => (
           <ValueSection
-            key={index}
+            key={value.id}
             index={index}
             id={value.id}
             title={value.title}
@@ -70,7 +76,7 @@ export default function Home() {
         ))}
         <CTASection />
       </main>
-      <ScrollNavigation totalSections={values.length + 1} />
+      <ScrollNavigation sections={values} />
     </>
   );
 }
