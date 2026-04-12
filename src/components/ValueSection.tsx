@@ -115,14 +115,14 @@ export function ValueSection({ index, id, title, keywords, image, details, galle
 
           <>
               <div className="flex flex-wrap gap-4 justify-center text-base md:text-lg lg:text-2xl">
-                {keywords.map((keyword, idx) =>
-              <span
-                key={idx}
-                className="px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full font-medium text-white">X sélections en équipe nationale depuis 2014
-
-
-              </span>
-              )}
+                {keywords.map((keyword, idx) => (
+                  <span
+                    key={idx}
+                    className="px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full font-medium text-white"
+                  >
+                    {keyword}
+                  </span>
+                ))}
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
