@@ -40,12 +40,12 @@ export default function Home(): ReactElement {
       gallery: []
     },
     {
-      id: "valeurs",
-      title: "Nos Valeurs",
-      keywords: ["Passion", "Excellence", "Partage"],
-      imageUrl: "https://images.unsplash.com/photo-1511886929837-354d827aae26?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-      details: "Les valeurs qui nous animent et nous définissent au quotidien.\n\nPassion :\nL'amour du tir à l'arc guide chacune de nos actions. C'est cette passion qui nous pousse à viser toujours plus haut et à transmettre notre discipline aux nouvelles générations.\n\nExcellence :\nNous cultivons l'excellence dans tous les aspects de notre activité : performance sportive, qualité de l'enseignement, organisation d'événements et accueil de nos partenaires.\n\nPartage :\nNous croyons au pouvoir du sport comme vecteur de lien social. Notre club est un lieu de rencontre, d'échange et de transmission entre générations et cultures.",
-      gallery: []
+      id: "engagement",
+      title: "Engagement Territorial",
+      keywords: ["9 écoles", "Formation jeunesse"],
+      imageUrl: "https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
+      details: "L'Arc Club de Nîmes s'investit activement dans le développement du tir à l'arc sur son territoire.\n\nNotre engagement territorial :\n• Partenariats avec 9 écoles primaires et collèges de la région\n• Programme de formation jeunesse dès 7 ans\n• Initiation et découverte du tir à l'arc pour plus de 500 jeunes par an\n• Formation d'entraîneurs bénévoles locaux\n• Organisation d'événements ouverts au grand public\n• Collaboration avec les institutions locales pour promouvoir le sport\n\nNous contribuons au dynamisme sportif de Nîmes et participons à l'éducation des jeunes générations à travers les valeurs du tir à l'arc : concentration, discipline, respect et dépassement de soi.",
+      gallery: [] as GalleryItem[]
     }
   ];
 
