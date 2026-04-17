@@ -1,9 +1,13 @@
 import { Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export function CTASection() {
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
+
   return (
     <section
+      ref={ref}
       id="contact"
       className="relative min-h-screen snap-start snap-always flex items-center justify-center overflow-hidden"
     >
@@ -16,18 +20,24 @@ export function CTASection() {
         <div className="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/80 to-primary/90" />
       </div>
 
-      <div className="relative z-10 container mx-auto px-4 py-20 md:py-0 text-center text-white">
+      <div className={`relative z-10 container mx-auto px-4 py-20 md:py-0 text-center text-white transition-all duration-1000 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      }`}>
         <div className="max-w-3xl mx-auto space-y-8 md:space-y-12">
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight px-2">
             Devenez Partenaire
           </h2>
           
-          <p className="text-base md:text-lg lg:text-xl leading-relaxed px-4">
+          <p className={`text-base md:text-lg lg:text-xl leading-relaxed px-4 transition-all duration-1000 delay-200 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}>
             Rejoignez l'aventure du 1er club français de tir à l'arc
             et associez votre marque à l'excellence sportive.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center pt-6 md:pt-8 px-4">
+          <div className={`flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center pt-6 md:pt-8 px-4 transition-all duration-1000 delay-300 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}>
             <Button
               asChild
               size="lg"
@@ -54,7 +64,9 @@ export function CTASection() {
         </div>
       </div>
 
-      <div className="absolute bottom-3 md:bottom-4 right-3 md:right-4 z-10">
+      <div className={`absolute bottom-3 md:bottom-4 right-3 md:right-4 z-10 transition-all duration-1000 delay-500 ${
+        isVisible ? 'opacity-100' : 'opacity-0'
+      }`}>
         <p className="text-white/40 text-[10px] md:text-xs font-light">
           Crédit photo ©World Archery
         </p>

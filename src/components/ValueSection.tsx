@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronDown, X, Images, ChevronLeft, ChevronRight } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export type GalleryItem = {
   type: "image" | "article";
@@ -22,6 +23,7 @@ export function ValueSection({ index, id, title, keywords, image, details, galle
   const [showDetails, setShowDetails] = useState(false);
   const [showGallery, setShowGallery] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
 
   const isEconomieSection = id === "impact";
 
@@ -35,6 +37,7 @@ export function ValueSection({ index, id, title, keywords, image, details, galle
 
   return (
     <section
+      ref={ref}
       id={id}
       className="relative min-h-screen snap-start snap-always flex items-center justify-center overflow-hidden"
     >
@@ -47,7 +50,9 @@ export function ValueSection({ index, id, title, keywords, image, details, galle
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/70 to-black/70" />
       </div>
 
-      <div className="relative z-10 container mx-auto px-4 py-20">
+      <div className={`relative z-10 container mx-auto px-4 py-20 transition-all duration-1000 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      }`}>
         <div className="max-w-6xl mx-auto text-center space-y-8 md:space-y-12">
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white">
             {title}
@@ -55,7 +60,9 @@ export function ValueSection({ index, id, title, keywords, image, details, galle
 
           {isEconomieSection ? (
             <div className="space-y-8 md:space-y-12 pt-8">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
+              <div className={`grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto transition-all duration-1000 delay-200 ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}>
                 <div className="bg-white/10 backdrop-blur-sm border-2 border-accent rounded-2xl p-6 md:p-8 text-center hover:bg-white/20 transition-all">
                   <div className="text-5xl md:text-6xl font-bold text-accent mb-3">
                     2M€
@@ -93,7 +100,9 @@ export function ValueSection({ index, id, title, keywords, image, details, galle
                 </div>
               </div>
 
-              <div className="flex flex-wrap gap-4 md:gap-6 justify-center text-base md:text-lg lg:text-xl">
+              <div className={`flex flex-wrap gap-4 md:gap-6 justify-center text-base md:text-lg lg:text-xl transition-all duration-1000 delay-300 ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}>
                 {keywords.map((keyword, idx) => (
                   <span
                     key={idx}
@@ -104,17 +113,23 @@ export function ValueSection({ index, id, title, keywords, image, details, galle
                 ))}
               </div>
 
-              <button
-                onClick={() => setShowDetails(true)}
-                className="mt-6 px-6 md:px-8 py-3 md:py-4 bg-white text-primary font-semibold rounded-full hover:bg-white/90 transition-all inline-flex items-center gap-2 text-base md:text-lg"
-              >
-                En savoir plus
-                <ChevronDown className="w-5 h-5" />
-              </button>
+              <div className={`transition-all duration-1000 delay-500 ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}>
+                <button
+                  onClick={() => setShowDetails(true)}
+                  className="mt-6 px-6 md:px-8 py-3 md:py-4 bg-white text-primary font-semibold rounded-full hover:bg-white/90 transition-all inline-flex items-center gap-2 text-base md:text-lg"
+                >
+                  En savoir plus
+                  <ChevronDown className="w-5 h-5" />
+                </button>
+              </div>
             </div>
           ) : (
             <>
-              <div className="flex flex-wrap gap-4 md:gap-6 justify-center text-base md:text-lg lg:text-xl">
+              <div className={`flex flex-wrap gap-4 md:gap-6 justify-center text-base md:text-lg lg:text-xl transition-all duration-1000 delay-200 ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}>
                 {keywords.map((keyword, idx) => (
                   <span
                     key={idx}
@@ -125,7 +140,9 @@ export function ValueSection({ index, id, title, keywords, image, details, galle
                 ))}
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center pt-4">
+              <div className={`flex flex-col sm:flex-row gap-4 md:gap-6 justify-center pt-4 transition-all duration-1000 delay-300 ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}>
                 <button
                   onClick={() => setShowDetails(true)}
                   className="px-6 md:px-8 py-3 md:py-4 bg-white text-primary font-semibold rounded-full hover:bg-white/90 transition-all inline-flex items-center justify-center gap-2 text-base md:text-lg"
@@ -150,8 +167,8 @@ export function ValueSection({ index, id, title, keywords, image, details, galle
       </div>
 
       {showDetails && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
-          <div className="bg-white rounded-2xl max-w-3xl w-full max-h-[80vh] overflow-y-auto">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 animate-in fade-in duration-300">
+          <div className="bg-white rounded-2xl max-w-3xl w-full max-h-[80vh] overflow-y-auto animate-in slide-in-from-bottom duration-500">
             <div className="sticky top-0 bg-white border-b border-gray-200 p-6 md:p-8 flex justify-between items-center">
               <h3 className="text-2xl md:text-3xl font-bold text-primary">{title}</h3>
               <button
@@ -172,7 +189,7 @@ export function ValueSection({ index, id, title, keywords, image, details, galle
       )}
 
       {showGallery && gallery && gallery.length > 0 && (
-        <div className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4">
+        <div className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4 animate-in fade-in duration-300">
           <button
             onClick={() => setShowGallery(false)}
             className="absolute top-4 right-4 p-2 bg-white/10 hover:bg-white/20 rounded-full transition-colors z-10"
@@ -180,7 +197,7 @@ export function ValueSection({ index, id, title, keywords, image, details, galle
             <X className="w-6 h-6 text-white" />
           </button>
 
-          <div className="relative w-full max-w-5xl">
+          <div className="relative w-full max-w-5xl animate-in zoom-in-95 duration-500">
             {gallery.length > 1 && (
               <>
                 <button
