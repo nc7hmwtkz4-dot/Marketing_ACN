@@ -23,7 +23,7 @@ export function ValueSection({ index, id, title, keywords, image, details, galle
   const [showGallery, setShowGallery] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const isEconomieSection = id === "economie";
+  const isEconomieSection = id === "impact";
 
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % gallery.length);
