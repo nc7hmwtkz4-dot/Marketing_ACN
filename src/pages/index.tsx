@@ -34,9 +34,9 @@ export default function Home(): ReactElement {
     {
       id: "impact",
       title: "Impact Économique",
-      keywords: ["2 M € retombées directes", "70 000 nuitées", "Dynamisme local"],
+      keywords: ["2ème événement nîmois", "2 M€ de retombées", "2350 visiteurs"],
       imageUrl: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-      details: "Notre tournoi international génère des retombées économiques significatives pour Nîmes et sa région.\n\nImpact économique direct :\n• 2 millions d'euros de retombées économiques directes\n• 70 000 nuitées hôtelières générées chaque année\n• Dynamisation du commerce local (restaurants, commerces, services)\n• Création d'emplois temporaires lors de l'événement\n• Valorisation de l'image de la ville à l'international\n• Attraction touristique majeure pendant la période hivernale\n\nNotre partenariat offre une visibilité exceptionnelle pendant un événement qui mobilise l'ensemble de l'écosystème économique nîmois.",
+      details: "Au-delà de l'aspect sportif, l'Arc Club de Nîmes est un acteur économique majeur pour la ville.\n\nImpact économique direct du tournoi 2026 :\n• 2350 participants (athlètes + accompagnants)\n• Dépense moyenne : 200€ par personne et par jour\n• Séjour moyen : 3,5 jours\n• Retombées économiques directes : 2 000 000€\n\nImpact économique indirect annuel :\n• Embauche de salariés permanents\n• Achats d'équipement et de matériel sportif\n• Prestations de services dans les commerces locaux\n• Investissements pour le fonctionnement du club\n• Retombées indirectes estimées : 400 000€ par an\n\nNotre tournoi international est le deuxième événement de la ville de Nîmes après la Féria en termes de retombées économiques.\n\nIl génère une activité essentielle en plein mois de janvier (hors saison touristique) pour les domaines de l'hôtellerie, de la restauration et des services locaux.\n\nPrès de 30 ans d'existence, une référence mondiale qui attire les meilleurs archers internationaux qui apprécient la qualité de l'organisation et l'expérience unique du tournoi tricolore.\n\nAprès une année record en 2025 avec 1238 archers participants, le tournoi poursuit sa croissance.",
       gallery: [] as GalleryItem[]
     },
     {
