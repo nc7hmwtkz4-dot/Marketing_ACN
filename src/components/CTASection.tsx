@@ -18,11 +18,11 @@ export function CTASection() {
 
       <div className="relative z-10 container mx-auto px-4 py-20 md:py-0 text-center text-white">
         <div className="max-w-3xl mx-auto space-y-8 md:space-y-12">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight px-2">
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight px-2">
             Devenez Partenaire
           </h2>
           
-          <p className="text-lg sm:text-xl md:text-2xl leading-relaxed px-4">
+          <p className="text-base md:text-lg lg:text-xl leading-relaxed px-4">
             Rejoignez l'aventure du 1er club français de tir à l'arc
             et associez votre marque à l'excellence sportive.
           </p>
@@ -31,10 +31,10 @@ export function CTASection() {
             <Button
               asChild
               size="lg"
-              className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-white text-base md:text-lg px-6 md:px-8 py-5 md:py-6 rounded-full"
+              className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-white text-base md:text-lg px-6 md:px-8 py-3 md:py-4 rounded-full"
             >
               <a href="tel:+33466291632" className="flex items-center justify-center gap-3">
-                <Phone className="w-4 h-4 md:w-5 md:h-5" />
+                <Phone className="w-5 h-5" />
                 <span className="whitespace-nowrap">04 66 29 16 32</span>
               </a>
             </Button>
@@ -43,11 +43,11 @@ export function CTASection() {
               asChild
               size="lg"
               variant="outline"
-              className="w-full sm:w-auto bg-transparent text-white border-white hover:bg-white hover:text-primary text-base md:text-lg px-6 md:px-8 py-5 md:py-6 rounded-full"
+              className="w-full sm:w-auto bg-transparent text-white border-white hover:bg-white hover:text-primary text-base md:text-lg px-6 md:px-8 py-3 md:py-4 rounded-full"
             >
               <a href="mailto:contact@arcclubdenimes.com" className="flex items-center justify-center gap-3">
-                <Mail className="w-4 h-4 md:w-5 md:h-5" />
-                <span className="text-sm sm:text-base md:text-lg">contact@arcclubdenimes.com</span>
+                <Mail className="w-5 h-5" />
+                <span>contact@arcclubdenimes.com</span>
               </a>
             </Button>
           </div>
