@@ -58,7 +58,7 @@ export function ValueSection({ index, id, title, keywords, image, details, galle
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
                 <div className="bg-white/10 backdrop-blur-sm border-2 border-accent rounded-2xl p-8 text-center hover:bg-white/20 transition-all">
                   <div className="text-5xl md:text-6xl font-bold text-accent mb-3">
-                    1,6M€
+                    2M€
                   </div>
                   <div className="text-lg md:text-xl font-semibold text-white mb-2">
                     Retombées Directes
