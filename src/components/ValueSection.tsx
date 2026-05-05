@@ -103,14 +103,14 @@ export function ValueSection({ index, id, title, keywords, image, details, galle
               <div className={`flex flex-wrap gap-4 md:gap-6 justify-center text-base md:text-lg lg:text-xl transition-all duration-1000 delay-300 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`
             }>
-                {keywords.map((keyword, idx) => (
-                  <span
-                    key={idx}
-                    className="px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full font-medium text-white"
-                  >
-                    {keyword}
-                  </span>
-                ))}
+                {keywords.map((keyword, idx) => {}
+
+
+
+
+
+
+              )}
               </div>
 
               <div className={`transition-all duration-1000 delay-500 ${
