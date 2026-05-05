@@ -27,7 +27,7 @@ export default function Home(): ReactElement {
       id: "parite",
       title: "Parité & Inclusion",
       keywords: ["Éducation", "Partage", "Sport pour tous"],
-      imageUrl: "https://images.unsplash.com/photo-1551958219-acbc608c6377?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
+      imageUrl: "/DSC04113.jpg",
       details: "L'Arc Club de Nîmes s'engage pour un sport accessible et inclusif.\n\nNotre approche de la parité et de l'inclusion :\n\n• Équipes de haut niveau national en catégorie masculine et féminine\n• Formation d'athlètes internationaux avec un collectif à parité\n• Section Para Archerie dédiée aux athlètes en situation de handicap\n• Programmes de solidarité internationale pour promouvoir le tir à l'arc dans le monde avec l'accueil d'athlètes de l'équipe nationale de Côte d'Ivoire\n• Soutien financier et humain aux organisateurs (Maroc, Thaïlande)\n• Accueil et accompagnement de tous les profils, sans discrimination\n• Soutien inconditionnel aux jeunes ayant des aspirations internationales (soutien financier, encadrement, suivi médical, et déplacements en compétition)\n\nNous sommes convaincus que le tir à l'arc doit être accessible à tous, quels que soient le genre, l'âge, l'origine ou les capacités physiques. Notre club est un lieu d'ouverture et de diversité.",
       gallery: [] as GalleryItem[]
     },
