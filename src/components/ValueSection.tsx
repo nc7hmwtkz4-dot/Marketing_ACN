@@ -25,6 +25,8 @@ export function ValueSection({ index, id, title, keywords, image, details, galle
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
 
+  const isEconomieSection = id === "impact";
+
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % gallery.length);
   };
@@ -56,40 +58,111 @@ export function ValueSection({ index, id, title, keywords, image, details, galle
             {title}
           </h2>
 
-          <div className={`flex flex-wrap gap-6 md:gap-8 justify-center text-base md:text-lg lg:text-xl transition-all duration-1000 delay-200 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}>
-            {keywords.map((keyword, idx) => (
-              <span
-                key={idx}
-                className="px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full font-medium text-white border border-white/30"
-              >
-                {keyword}
-              </span>
-            ))}
-          </div>
+          {isEconomieSection ? (
+            <div className="space-y-8 md:space-y-12 pt-8">
+              <div className={`grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto transition-all duration-1000 delay-200 ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}>
+                <div className="bg-white/10 backdrop-blur-sm border-2 border-accent rounded-2xl p-6 md:p-8 text-center hover:bg-white/20 transition-all">
+                  <div className="text-5xl md:text-6xl font-bold text-accent mb-3">
+                    2M€
+                  </div>
+                  <div className="text-lg md:text-xl font-semibold text-white mb-2">
+                    Retombées Directes
+                  </div>
+                  <div className="text-sm text-white/80">
+                    Tournoi 2026
+                  </div>
+                </div>
 
-          <div className={`flex flex-col sm:flex-row gap-4 md:gap-6 justify-center pt-4 transition-all duration-1000 delay-300 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}>
-            <button
-              onClick={() => setShowDetails(true)}
-              className="px-6 md:px-8 py-3 md:py-4 bg-white text-primary font-semibold rounded-full hover:bg-white/90 transition-all inline-flex items-center justify-center gap-2 text-base md:text-lg"
-            >
-              En savoir plus
-              <ChevronDown className="w-5 h-5" />
-            </button>
+                <div className="bg-white/10 backdrop-blur-sm border-2 border-secondary rounded-2xl p-6 md:p-8 text-center hover:bg-white/20 transition-all">
+                  <div className="text-5xl md:text-6xl font-bold text-secondary mb-3">
+                    400K€
+                  </div>
+                  <div className="text-lg md:text-xl font-semibold text-white mb-2">
+                    Impact Indirect
+                  </div>
+                  <div className="text-sm text-white/80">
+                    Par an
+                  </div>
+                </div>
 
-            {gallery && gallery.length > 0 && (
-              <button
-                onClick={() => setShowGallery(true)}
-                className="px-6 md:px-8 py-3 md:py-4 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-primary transition-all inline-flex items-center justify-center gap-2 text-base md:text-lg"
-              >
-                <Images className="w-5 h-5" />
-                Galerie
-              </button>
-            )}
-          </div>
+                <div className="bg-white/10 backdrop-blur-sm border-2 border-primary rounded-2xl p-6 md:p-8 text-center hover:bg-white/20 transition-all">
+                  <div className="text-5xl md:text-6xl font-bold text-primary mb-3">
+                    2350
+                  </div>
+                  <div className="text-lg md:text-xl font-semibold text-white mb-2">
+                    Visiteurs
+                  </div>
+                  <div className="text-sm text-white/80">
+                    3,5 jours moyenne
+                  </div>
+                </div>
+              </div>
+
+              <div className={`flex flex-wrap gap-4 md:gap-6 justify-center text-base md:text-lg lg:text-xl transition-all duration-1000 delay-300 ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}>
+                {keywords.map((keyword, idx) => (
+                  <span
+                    key={idx}
+                    className="px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full font-medium text-white border border-white/30"
+                  >
+                    {keyword}
+                  </span>
+                ))}
+              </div>
+
+              <div className={`transition-all duration-1000 delay-500 ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}>
+                <button
+                  onClick={() => setShowDetails(true)}
+                  className="mt-6 px-6 md:px-8 py-3 md:py-4 bg-white text-primary font-semibold rounded-full hover:bg-white/90 transition-all inline-flex items-center gap-2 text-base md:text-lg"
+                >
+                  En savoir plus
+                  <ChevronDown className="w-5 h-5" />
+                </button>
+              </div>
+            </div>
+          ) : (
+            <>
+              <div className={`flex flex-wrap gap-4 md:gap-6 justify-center text-base md:text-lg lg:text-xl transition-all duration-1000 delay-200 ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}>
+                {keywords.map((keyword, idx) => (
+                  <span
+                    key={idx}
+                    className="px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full font-medium text-white"
+                  >
+                    {keyword}
+                  </span>
+                ))}
+              </div>
+
+              <div className={`flex flex-col sm:flex-row gap-4 md:gap-6 justify-center pt-4 transition-all duration-1000 delay-300 ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}>
+                <button
+                  onClick={() => setShowDetails(true)}
+                  className="px-6 md:px-8 py-3 md:py-4 bg-white text-primary font-semibold rounded-full hover:bg-white/90 transition-all inline-flex items-center justify-center gap-2 text-base md:text-lg"
+                >
+                  En savoir plus
+                  <ChevronDown className="w-5 h-5" />
+                </button>
+
+                {gallery && gallery.length > 0 && (
+                  <button
+                    onClick={() => setShowGallery(true)}
+                    className="px-6 md:px-8 py-3 md:py-4 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-primary transition-all inline-flex items-center justify-center gap-2 text-base md:text-lg"
+                  >
+                    <Images className="w-5 h-5" />
+                    Galerie
+                  </button>
+                )}
+              </div>
+            </>
+          )}
         </div>
       </div>
 
