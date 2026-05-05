@@ -9,7 +9,7 @@ export interface SEOProps {
 
 export function SEOElements({
   title = "Arc Club de Nîmes — Excellence Sportive & Sponsoring",
-  description = "1er club français de tir à l'arc. 2 médailles Paris 2024. Partenaire stratégique pour sponsors exigeants.",
+  description = "1er club français de tir à l'arc. 3 médailles olympiques. Partenaire stratégique pour sponsors exigeants. L'Arc Club de Nîmes se définit par l'excellence, l'inclusion, le rayonnement économique et l'implication auprès de la communauté. Si ces valeurs vous parlent, n'attendez plus, contactez-nous!",
   image = "/og-image.png",
   url,
 }: SEOProps) {
