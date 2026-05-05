@@ -1,6 +1,6 @@
 ---
 title: Isolation visuelle des pages
-status: in_progress
+status: done
 priority: high
 type: chore
 tags:
@@ -21,8 +21,8 @@ Objectif : éviter qu'une modification visuelle ou comportementale spécifique �
 - [x] Vérifier les composants partagés utilisés par plusieurs pages et éviter les dépendances visuelles non désirées
 - [x] Restaurer toutes les sections manquantes de la homepage dans src/pages/index.tsx
 - [x] Vérifier que la navigation de scroll pointe à nouveau vers toutes les sections
-- [ ] Valider que la homepage et la page 404 restent visuellement cohérentes sans effets de bord croisés
-- [ ] Marquer la tâche comme terminée après validation
+- [x] Valider que la homepage et la page 404 restent visuellement cohérentes sans effets de bord croisés
+- [x] Marquer la tâche comme terminée après validation
 
 ## Acceptance
 Les styles et comportements propres à la homepage ne s'appliquent plus globalement aux autres pages.
