@@ -1,6 +1,6 @@
 ---
 title: Isolation des surfaces visuelles par page
-status: in_progress
+status: done
 priority: high
 type: chore
 tags:
@@ -19,8 +19,8 @@ Stabiliser l'architecture visuelle pour que chaque page puisse être modifiée i
 - [x] Identifier les composants partagés qui propagent des changements visuels entre pages
 - [x] Extraire les actions visuelles de la homepage vers un composant dédié à la homepage
 - [x] Retirer la dépendance de la page 404 au bouton UI partagé
-- [ ] Valider que la homepage et la page 404 gardent leur rendu sans dépendre d'un style partagé de page
-- [ ] Vérifier l'absence d'erreurs TypeScript, lint et runtime
+- [x] Valider que la homepage et la page 404 gardent leur rendu sans dépendre d'un style partagé de page
+- [x] Vérifier l'absence d'erreurs TypeScript, lint et runtime
 
 ## Acceptance
 Les CTA brandés de la homepage peuvent être modifiés sans changer la page 404.

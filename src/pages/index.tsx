@@ -42,10 +42,10 @@ export default function Home(): ReactElement {
     {
       id: "engagement",
       title: "Engagement Territorial",
-      keywords: ["9 écoles", "Formation jeunesse"],
-      imageUrl: "https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-      details: "L'Arc Club de Nîmes s'investit activement dans le développement du tir à l'arc sur son territoire.\n\nNotre engagement territorial :\n• Partenariats avec 9 écoles primaires et collèges de la région\n• Programme de formation jeunesse dès 7 ans\n• Initiation et découverte du tir à l'arc pour plus de 500 jeunes par an\n• Formation d'entraîneurs bénévoles locaux\n• Organisation d'événements ouverts au grand public\n• Collaboration avec les institutions locales pour promouvoir le sport\n\nNous contribuons au dynamisme sportif de Nîmes et participons à l'éducation des jeunes générations à travers les valeurs du tir à l'arc : concentration, discipline, respect et dépassement de soi.",
-      gallery: [] as GalleryItem[]
+      keywords: ["Jeunesse", "Formation", "Patrimoine", "Éducation"],
+      imageUrl: "/engagement-territorial.jpg",
+      details: "L'Arc Club de Nîmes s'engage activement dans la vie de son territoire. Depuis sa création en 1969, le club a formé plus de 3 000 jeunes aux valeurs du tir à l'arc : rigueur, concentration, respect, et dépassement de soi.\n\nPartenaire des écoles et structures jeunesse locales, nous organisons régulièrement des initiations gratuites pour faire découvrir notre discipline. Nos coachs interviennent dans les quartiers prioritaires et auprès de publics spécifiques (handicap, réinsertion).\n\nAu-delà du sport, nous contribuons à la valorisation du patrimoine nîmois et au dynamisme associatif régional. L'Arc Club de Nîmes, c'est une institution locale engagée pour la jeunesse et le développement de son territoire.",
+      gallery: territorialGallery
     }
   ];
 
