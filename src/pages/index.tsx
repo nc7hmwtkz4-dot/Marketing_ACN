@@ -42,9 +42,9 @@ export default function Home(): ReactElement {
     {
       id: "engagement",
       title: "Engagement Territorial",
-      keywords: ["Jeunesse", "Formation", "Patrimoine", "Éducation"],
+      keywords: ["Programme Scolaire", "Pratique de qualité pour tous"],
       imageUrl: "/engagement-territorial.jpg",
-      details: "L'Arc Club de Nîmes s'engage activement dans la vie de son territoire. Depuis sa création en 1969, le club a formé plus de 3 000 jeunes aux valeurs du tir à l'arc : rigueur, concentration, respect, et dépassement de soi.\n\nPartenaire des écoles et structures jeunesse locales, nous organisons régulièrement des initiations gratuites pour faire découvrir notre discipline. Nos coachs interviennent dans les quartiers prioritaires et auprès de publics spécifiques (handicap, réinsertion).\n\nAu-delà du sport, nous contribuons à la valorisation du patrimoine nîmois et au dynamisme associatif régional. L'Arc Club de Nîmes, c'est une institution locale engagée pour la jeunesse et le développement de son territoire.",
+      details: "L'Arc Club de Nîmes s'investit activement dans le développement du tir à l'arc sur son territoire.\n\nNotre engagement territorial :\n• Partenariats avec 9 écoles primaires et collèges de la métropole\n• Programme de formation jeunesse dès 7 ans\n• Initiation et découverte du tir à l'arc pour près de 1000 jeunes par an\n• Formation d'entraîneurs bénévoles locaux\n• Organisation d'événements ouverts au grand public\n• Collaboration avec les institutions locales pour promouvoir le sport\n\nL'Arc Club de Nîmes apporte son soutien et travaille en étroite collaboration avec les clubs alentours.\n\nNous contribuons au dynamisme sportif de Nîmes et participons à l'éducation des jeunes générations à travers les valeurs du tir à l'arc : concentration, discipline, respect et dépassement de soi.\n\nL'Arc Club de Nîmes œuvre également pour une pratique du sport pour tous dans les meilleures conditions :\n• Site\n• Qualité de l'encadrement\n• Matériel à disposition",
       gallery: [] as GalleryItem[]
     }
   ];
