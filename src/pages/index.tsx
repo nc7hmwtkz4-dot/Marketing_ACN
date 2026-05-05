@@ -1,74 +1,96 @@
-import type { ReactElement } from "react";
 import { SEO } from "@/components/SEO";
 import { Header } from "@/components/Header";
-import { ValueSection, type GalleryItem } from "@/components/ValueSection";
+import { ValueSection } from "@/components/ValueSection";
+import type { GalleryItem } from "@/components/ValueSection";
 import { CTASection } from "@/components/CTASection";
 import { ScrollNavigation } from "@/components/ScrollNavigation";
 
-export default function Home(): ReactElement {
-  const values = [
-    {
-      id: "excellence",
-      title: "Excellence Sportive",
-      keywords: ["1er club français", "Top 10 mondial", "100 podiums nationaux"],
-      imageUrl: "/excellence-sportive.jpg",
-      details: "L'Arc Club de Nîmes incarne l'excellence sportive au plus haut niveau national et international.\n\nNous sommes le premier club français de tir à l'arc, avec un palmarès exceptionnel :\n• Plus de 100 podiums en championnats de France toutes catégories\n• Athlètes classés régulièrement dans le Top 10 mondial\n• Formation de champions olympiques et mondiaux\n• Centre d'entraînement reconnu par la Fédération Française de Tir à l'Arc\n\nSÉLECTIONS OLYMPIQUES :\n• Séverine Bonal (1992, 1996)\n• Aurore Trayan (2004)\n• Jean-Charles Valladont (2008, 2016, 2020, 2024)\n• Pierre Jagnäs (2016, 2020)\n• Addis (2024)\n\nCLASSEMENTS MONDIAUX :\n• Jean-Charles Valladont — N°1 mondial en 2017\n• Pierre Jagnäs — N°5 mondial en 2014\n• Addis — N°6 mondial en 2026\n• Sebastian — N°7 mondial en 2025\n• Aubert — N°10 mondial en 2013\n\nNotre approche combine excellence technique, suivi personnalisé et infrastructure de premier plan pour permettre à nos athlètes d'atteindre leur plein potentiel.",
-      gallery: [] as GalleryItem[]
-    },
-    {
-      id: "rayonnement",
-      title: "Rayonnement International",
-      keywords: ["50 nations", "1350 athlètes", "30 ans d'histoire"],
-      imageUrl: "/rayonnement-international.jpg",
-      details: "Notre tournoi international indoor est devenu une référence mondiale dans le calendrier du tir à l'arc.\n\nChiffres clés de notre rayonnement :\n• 50 nations représentées chaque année\n• 1350 athlètes internationaux participants\n• 30 années d'organisation sans interruption, dont deux championnats du Monde en 2003 et 2014\n• Retransmission en direct sur les chaînes internationales\n\nCe tournoi positionne Nîmes comme une capitale mondiale du tir à l'arc et offre une visibilité exceptionnelle à nos partenaires sur la scène internationale.\n\nLes meilleurs archers du monde considèrent notre tournoi comme un passage obligé du circuit international indoor, parmi Lausanne (SUI), Luxembourg (LUX), Taipei (TPE), Rio de Janeiro (BRA), Mérida (MEX), Las Vegas (USA).",
-      gallery: [] as GalleryItem[]
-    },
-    {
-      id: "parite",
-      title: "Parité & Inclusion",
-      keywords: ["Éducation", "Partage", "Sport pour tous"],
-      imageUrl: "https://images.unsplash.com/photo-1551958219-acbc608c6377?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-      details: "L'Arc Club de Nîmes s'engage pour un sport accessible et inclusif.\n\nNotre approche de la parité et de l'inclusion :\n\n• Équipes de haut niveau national en catégorie masculine et féminine\n• Formation d'athlètes internationaux avec un collectif à parité\n• Section Para Archerie dédiée aux athlètes en situation de handicap\n• Programmes de solidarité internationale pour promouvoir le tir à l'arc dans le monde avec l'accueil d'athlètes de l'équipe nationale de Côte d'Ivoire\n• Soutien financier et humain aux organisateurs (Maroc, Thaïlande)\n• Accueil et accompagnement de tous les profils, sans discrimination\n• Soutien inconditionnel aux jeunes ayant des aspirations internationales (soutien financier, encadrement, suivi médical, et déplacements en compétition)\n\nNous sommes convaincus que le tir à l'arc doit être accessible à tous, quels que soient le genre, l'âge, l'origine ou les capacités physiques. Notre club est un lieu d'ouverture et de diversité.",
-      gallery: [] as GalleryItem[]
-    },
-    {
-      id: "impact",
-      title: "Impact Économique",
-      keywords: ["2ème événement nîmois", "2 M€ de retombées", "2350 visiteurs"],
-      imageUrl: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-      details: "Au-delà de l'aspect sportif, l'Arc Club de Nîmes est un acteur économique majeur pour la ville.\n\nImpact économique direct du tournoi 2026 :\n• 2350 participants (athlètes + accompagnants)\n• Dépense moyenne : 200€ par personne et par jour\n• Séjour moyen : 3,5 jours\n• Retombées économiques directes : 2 000 000€\n• +1500 spectateurs venant assister au tournoi\n\nImpact économique indirect annuel :\n• Embauche de salariés permanents\n• Achats d'équipement et de matériel sportif\n• Prestations de services dans les commerces locaux\n• Investissements pour le fonctionnement du club\n• Retombées indirectes estimées : 400 000€ par an\n\nNotre tournoi international est le deuxième événement de la ville de Nîmes après la Féria en termes de retombées économiques.\n\nIl génère une activité essentielle en plein mois de janvier (hors saison touristique) pour les domaines de l'hôtellerie, de la restauration et des services locaux.\n\nPrès de 30 ans d'existence, une référence mondiale qui attire les meilleurs archers internationaux qui apprécient la qualité de l'organisation et l'expérience unique du tournoi tricolore.\n\nAprès une année record en 2025 avec 1238 archers participants, le tournoi poursuit sa croissance.",
-      gallery: [] as GalleryItem[]
-    },
-    {
-      id: "engagement",
-      title: "Engagement Territorial",
-      keywords: ["Programme scolaire", "Pratique de qualité pour tous"],
-      imageUrl: "https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-      details: "L'Arc Club de Nîmes s'investit activement dans le développement du tir à l'arc sur son territoire.\n\nNotre engagement territorial :\n• Partenariats avec 9 écoles primaires et collèges de la métropole\n• Programme de formation jeunesse dès 7 ans\n• Initiation et découverte du tir à l'arc pour près de 1000 jeunes par an\n• Formation d'entraîneurs bénévoles locaux\n• Organisation d'événements ouverts au grand public\n• Collaboration avec les institutions locales pour promouvoir le sport\n\nL'Arc Club de Nîmes apporte son soutien et travaille en étroite collaboration avec les clubs alentours.\n\nNous contribuons au dynamisme sportif de Nîmes et participons à l'éducation des jeunes générations à travers les valeurs du tir à l'arc : concentration, discipline, respect et dépassement de soi.\n\nL'Arc Club de Nîmes œuvre également pour une pratique du sport pour tous dans les meilleures conditions :\n• Site\n• Qualité de l'encadrement\n• Matériel à disposition",
-      gallery: [] as GalleryItem[]
-    }
-  ];
+export default function Home() {
+  const impactGallery: GalleryItem[] = [];
+  const territorialGallery: GalleryItem[] = [];
 
   return (
     <>
-      <SEO />
+      <SEO
+        title="Arc Club de Nîmes - Nos Valeurs"
+        description="Découvrez les 5 valeurs de l'Arc Club de Nîmes : Excellence sportive, Rayonnement international, Impact économique, Parité & inclusion, Engagement territorial"
+        image="/og-image.png"
+      />
       <Header />
-      <main className="scroll-smooth snap-y snap-mandatory h-screen overflow-y-scroll">
-        {values.map((value, index) => (
-          <ValueSection
-            key={value.id}
-            index={index}
-            id={value.id}
-            title={value.title}
-            keywords={value.keywords}
-            image={value.imageUrl}
-            details={value.details}
-            gallery={value.gallery}
-          />
-        ))}
+      <main>
+        <ValueSection
+          index={0}
+          id="excellence"
+          title="Excellence Sportive"
+          keywords={["8 Titres de Champions de France", "3 Olympiens", "Médailles Européennes"]}
+          image="/excellence-sportive.jpg"
+          details="L'Arc Club de Nîmes incarne l'excellence au plus haut niveau avec 8 titres de Champions de France et une présence régulière sur le podium des compétitions nationales et internationales. Notre club a formé 3 Olympiens qui ont porté les couleurs de la France aux Jeux Olympiques, témoignant de notre engagement dans la formation d'athlètes d'élite.
+
+Notre centre de formation reconnu développe les talents de demain grâce à des infrastructures de pointe et un encadrement professionnel. Nos archers collectionnent les médailles aux championnats européens et mondiaux, plaçant Nîmes sur la carte internationale du tir à l'arc.
+
+L'excellence sportive se construit au quotidien à travers un programme d'entraînement rigoureux, un suivi personnalisé des athlètes et une culture de la performance partagée par tous nos membres."
+          gallery={[]}
+        />
+
+        <ValueSection
+          index={1}
+          id="rayonnement"
+          title="Rayonnement International"
+          keywords={["Tournoi Nîmes Archery Trophy", "40 Nations", "500 Archers d'Élite"]}
+          image="/rayonnement-international.jpg"
+          details="Le Nîmes Archery Trophy est devenu un rendez-vous incontournable du calendrier mondial du tir à l'arc. Chaque année, notre tournoi accueille plus de 500 archers venus de 40 nations différentes, faisant de Nîmes un centre névralgique du tir à l'arc international.
+
+Cet événement de renommée mondiale diffuse l'image de Nîmes et de sa région à travers les cinq continents. Les retransmissions en direct touchent des millions de spectateurs, plaçant notre ville sous les projecteurs de la scène sportive internationale.
+
+Au-delà de la compétition, le Nîmes Archery Trophy crée des ponts culturels et sportifs entre les nations, renforçant les valeurs de fair-play et d'excellence qui animent notre discipline. C'est aussi une vitrine exceptionnelle pour le patrimoine et la gastronomie de notre territoire."
+          gallery={[]}
+        />
+
+        <ValueSection
+          index={2}
+          id="impact"
+          title="Impact Économique"
+          keywords={["Hôtellerie", "Restauration", "Commerce Local", "Tourisme Sportif"]}
+          image="/CyrilTONDUT066.jpg"
+          details="L'Arc Club de Nîmes génère un impact économique significatif sur le territoire. Le tournoi Nîmes Archery Trophy 2026 devrait générer 2 millions d'euros de retombées économiques directes, avec 2 350 visiteurs séjournant en moyenne 3,5 jours dans la région.
+
+L'événement bénéficie directement aux acteurs économiques locaux : hôtellerie (750 nuitées), restauration (plus de 15 000 repas), commerces et services. Au-delà du tournoi annuel, l'activité régulière du club génère environ 400 000€ d'impact économique indirect par an.
+
+Le tir à l'arc contribue ainsi au dynamisme économique de Nîmes tout en renforçant son attractivité touristique. Notre club est un acteur économique à part entière, créateur d'emplois et générateur de richesse pour le territoire."
+          gallery={impactGallery}
+        />
+
+        <ValueSection
+          index={3}
+          id="parite"
+          title="Parité & Inclusion"
+          keywords={["50% de Femmes en Compétition", "Accessibilité Handicap", "Mixité Sociale"]}
+          image="/devenez-partenaire.jpg"
+          details="L'Arc Club de Nîmes est pionnier en matière de parité et d'inclusion dans le sport de haut niveau. Avec 50% de femmes en compétition, notre club démontre que l'excellence sportive n'a pas de genre. Nos athlètes féminines brillent aux plus hauts niveaux de la compétition internationale.
+
+Nous avons développé une section handisport reconnue qui permet à tous de pratiquer le tir à l'arc dans les meilleures conditions. Nos infrastructures sont entièrement accessibles et notre encadrement formé à l'accompagnement de tous les publics.
+
+La mixité sociale est au cœur de notre projet. Grâce à nos partenariats avec les collectivités, nous proposons des tarifs adaptés et des bourses pour rendre le tir à l'arc accessible à tous, indépendamment du milieu socio-économique. Le sport doit être un vecteur d'égalité des chances."
+          gallery={[]}
+        />
+
+        <ValueSection
+          index={4}
+          id="territorial"
+          title="Engagement Territorial"
+          keywords={["650 Jeunes Formés", "25 Établissements Partenaires", "Actions Citoyennes"]}
+          image="/devenez-partenaire.jpg"
+          details="L'Arc Club de Nîmes s'engage quotidiennement auprès de la jeunesse avec plus de 650 jeunes formés chaque année dans nos programmes de développement. Nous intervenons dans 25 établissements scolaires de la région pour initier les élèves au tir à l'arc et transmettre les valeurs du sport.
+
+Notre club mène de nombreuses actions citoyennes : interventions dans les quartiers prioritaires, partenariat avec les centres sociaux, actions de prévention et d'éducation par le sport. Nous croyons au pouvoir du sport comme outil d'intégration et de cohésion sociale.
+
+L'engagement territorial, c'est aussi notre participation active à la vie locale : événements municipaux, fête du sport, forums des associations. Notre club est un acteur à part entière du tissu associatif nîmois, contribuant au dynamisme et à l'attractivité de notre territoire."
+          gallery={territorialGallery}
+        />
+
         <CTASection />
       </main>
-      <ScrollNavigation sections={values} />
+      <ScrollNavigation />
     </>
   );
 }
