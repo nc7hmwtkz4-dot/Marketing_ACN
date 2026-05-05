@@ -90,7 +90,14 @@ L'engagement territorial, c'est aussi notre participation active à la vie local
 
         <CTASection />
       </main>
-      <ScrollNavigation />
+      <ScrollNavigation sections={[
+        { id: "excellence", label: "Excellence Sportive" },
+        { id: "rayonnement", label: "Rayonnement" },
+        { id: "impact", label: "Impact Économique" },
+        { id: "parite", label: "Parité & Inclusion" },
+        { id: "territorial", label: "Engagement" },
+        { id: "contact", label: "Contact" }
+      ]} />
     </>
   );
 }
