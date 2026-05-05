@@ -19,8 +19,8 @@ Objectif : éviter qu'une modification visuelle ou comportementale spécifique �
 - [x] Vérifier les styles globaux et identifier les comportements spécifiques à la homepage appliqués à tout le site
 - [x] Déplacer les comportements spécifiques à la homepage vers la page d'accueil ou ses composants dédiés
 - [x] Vérifier les composants partagés utilisés par plusieurs pages et éviter les dépendances visuelles non désirées
-- [ ] Restaurer toutes les sections manquantes de la homepage dans src/pages/index.tsx
-- [ ] Vérifier que la navigation de scroll pointe à nouveau vers toutes les sections
+- [x] Restaurer toutes les sections manquantes de la homepage dans src/pages/index.tsx
+- [x] Vérifier que la navigation de scroll pointe à nouveau vers toutes les sections
 - [ ] Valider que la homepage et la page 404 restent visuellement cohérentes sans effets de bord croisés
 - [ ] Marquer la tâche comme terminée après validation
 
